@@ -9,7 +9,7 @@ export const NavBar = () => {
 	];
 
 	return (
-		<nav className='my-16 animate-fade-in '>
+		<nav>
 			<ul className='flex items-center justify-center gap-4'>
 				{navigation.map((item) => (
 					<Link
