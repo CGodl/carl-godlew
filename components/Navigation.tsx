@@ -10,7 +10,7 @@ export const NavBar = () => {
 	];
 
 	return (
-		<nav className='fixed top-10 right-10 bg-slate-300 px-4 py-2 rounded-3xl backdrop-blur-sm w-fit bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60'>
+		<nav className='fixed bottom-5 md:bottom-auto md:top-10 md:right-10 bg-slate-300 px-4 py-2 rounded-3xl backdrop-blur-sm w-fit bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60'>
 			<ul className='flex items-center justify-center gap-4'>
 				{navigation.map((item) => (
 					<Link
