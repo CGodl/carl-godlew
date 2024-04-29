@@ -6,7 +6,6 @@ export const NavBar = () => {
 		{ name: 'Bio', href: '/two' },
 		{ name: 'Resume', href: '/three' },
 		{ name: 'Contact', href: '/contact' },
-		
 	];
 
 	return (
