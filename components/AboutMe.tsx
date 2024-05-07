@@ -1,86 +1,83 @@
 import { Card, CardImage } from './ui/card';
 
 const AboutMe = () => {
+	const bentoImages = [];
+
 	const BentoGrid = () => {
 		return (
-			<div>
-				<div className='flex'>
-					<Card className='rounded-lg h-[420px] w-[420px]'>
-						<CardImage
-							src='/spainForgot.jpg'
-							alt='Picture of Carl Godlewski'
-							style={{ height: '100%', width: '100%' }}
-						/>
-					</Card>
+			<div className='grid grid-cols-5 grid-rows-5 gap-2'>
+				<Card className='rounded-lg col-span-4 row-span-4'>
+					<CardImage
+						src='/spainForgot.jpg'
+						alt='Picture of Carl Godlewski'
+						style={{ height: '100%', width: '100%' }}
+					/>
+				</Card>
+				<Card className='col-start-5 rounded-lg'>
+					<CardImage
+						src='/spainForgot.jpg'
+						alt='Picture of Carl Godlewski'
+						style={{ height: '100%', width: '100%' }}
+					/>
+				</Card>
 
-					<div className='grid grid-row-4 gap-2 ml-4'>
-						<Card className='rounded-lg h-[100px] w-[100px]'>
-							<CardImage
-								src='/spainCordoba.jpg'
-								alt='Picture of Carl Godlewski'
-								style={{ height: '100%', width: '100%' }}
-							/>
-						</Card>
-						<Card className='rounded-lg h-[100px] w-[100px]'>
-							<CardImage
-								src='/spainCordoba.jpg'
-								alt='Picture of Carl Godlewski'
-								style={{ height: '100%', width: '100%' }}
-							/>
-						</Card>
-						<Card className='rounded-lg h-[100px] w-[100px]'>
-							<CardImage
-								src='/spainCordoba.jpg'
-								alt='Picture of Carl Godlewski'
-								style={{ height: '100%', width: '100%' }}
-							/>
-						</Card>
-						<Card className='rounded-lg h-[100px] w-[100px]'>
-							<CardImage
-								src='/spainCordoba.jpg'
-								alt='Picture of Carl Godlewski'
-								style={{ height: '100%', width: '100%' }}
-							/>
-						</Card>
-					</div>
-				</div>
-				<div className='flex mt-4'>
-					<Card className='rounded-lg h-[100px] w-[100px]'>
-						<CardImage
-							src='/spainForgot.jpg'
-							alt='Picture of Carl Godlewski'
-							style={{ height: '100%', width: '100%' }}
-						/>
-					</Card>
-					<Card className='rounded-lg h-[100px] w-[100px]'>
-						<CardImage
-							src='/spainForgot.jpg'
-							alt='Picture of Carl Godlewski'
-							style={{ height: '100%', width: '100%' }}
-						/>
-					</Card>
-					<Card className='rounded-lg h-[100px] w-[100px]'>
-						<CardImage
-							src='/spainForgot.jpg'
-							alt='Picture of Carl Godlewski'
-							style={{ height: '100%', width: '100%' }}
-						/>
-					</Card>
-					<Card className='rounded-lg h-[100px] w-[100px]'>
-						<CardImage
-							src='/spainForgot.jpg'
-							alt='Picture of Carl Godlewski'
-							style={{ height: '100%', width: '100%' }}
-						/>
-					</Card>
-					<Card className='rounded-lg h-[100px] w-[100px]'>
-						<CardImage
-							src='/spainForgot.jpg'
-							alt='Picture of Carl Godlewski'
-							style={{ height: '100%', width: '100%' }}
-						/>
-					</Card>
-				</div>
+				<Card className='col-start-5 row-start-2 rounded-lg'>
+					<CardImage
+						src='/spainCordoba.jpg'
+						alt='Picture of Carl Godlewski'
+						style={{ height: '100%', width: '100%' }}
+					/>
+				</Card>
+				<Card className='col-start-5 row-start-3 rounded-lg'>
+					<CardImage
+						src='/spainCordoba.jpg'
+						alt='Picture of Carl Godlewski'
+						style={{ height: '100%', width: '100%' }}
+					/>
+				</Card>
+				<Card className='col-start-5 row-start-4 rounded-lg'>
+					<CardImage
+						src='/spainCordoba.jpg'
+						alt='Picture of Carl Godlewski'
+						style={{ height: '100%', width: '100%' }}
+					/>
+				</Card>
+				<Card className='row-start-5 rounded-lg'>
+					<CardImage
+						src='/spainCordoba.jpg'
+						alt='Picture of Carl Godlewski'
+						style={{ height: '100%', width: '100%' }}
+					/>
+				</Card>
+
+				<Card className='row-start-5 rounded-lg'>
+					<CardImage
+						src='/spainForgot.jpg'
+						alt='Picture of Carl Godlewski'
+						style={{ height: '100%', width: '100%' }}
+					/>
+				</Card>
+				<Card className='row-start-5 rounded-lg'>
+					<CardImage
+						src='/spainForgot.jpg'
+						alt='Picture of Carl Godlewski'
+						style={{ height: '100%', width: '100%' }}
+					/>
+				</Card>
+				<Card className='row-start-5 rounded-lg'>
+					<CardImage
+						src='/spainForgot.jpg'
+						alt='Picture of Carl Godlewski'
+						style={{ height: '100%', width: '100%' }}
+					/>
+				</Card>
+				<Card className='row-start-5 rounded-lg'>
+					<CardImage
+						src='/spainForgot.jpg'
+						alt='Picture of Carl Godlewski'
+						style={{ height: '100%', width: '100%' }}
+					/>
+				</Card>
 			</div>
 		);
 	};
