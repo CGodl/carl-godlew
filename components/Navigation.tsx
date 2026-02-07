@@ -3,10 +3,9 @@ import Link from 'next/link';
 export const NavBar = () => {
 	const navigation = [
 		{ name: 'Home', href: '/one' },
-		{ name: 'Bio', href: '/two' },
+		{ name: 'Bio', href: '/bio' },
 		{ name: 'Resume', href: '/three' },
 		{ name: 'Contact', href: '/contact' },
-		
 	];
 
 	return (
