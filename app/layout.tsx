@@ -1,10 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { Knewave } from 'next/font/google';
+import { Inter, Knewave, Goldman } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
-const knewave = Knewave({ subsets: ['latin'], weight: '400' });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter'});
+const knewave = Knewave({ subsets: ['latin'], weight: '400', variable: '--font-knewave' });
+const goldman = Goldman({ subsets: ['latin'], weight: '400', variable: '--font-goldman' });
 
 export const metadata: Metadata = {
   title: 'Carl Godlewski',
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
   
-      <body >{children}</body>
+      <body className={`${inter.variable} ${knewave.variable} ${goldman.variable}`}>{children}</body>
     </html>
   )
 }

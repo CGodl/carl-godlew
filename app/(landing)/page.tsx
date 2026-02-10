@@ -1,15 +1,15 @@
 import Link from "next/link";
 import React from "react";
 import Particles from "@/components/particles";
-import { NavBar } from "@/components/Navigation";
 import {HeaderImage} from "@/components/HeaderImage";
+import { NavBarGlass } from "@/components/Navigation/Glass";
 
 
 export default function HomePage() {
 	return (
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-coolGray-900">
             <HeaderImage/>
-            <NavBar />
+            <NavBarGlass />
         </div>
 
 

@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
 @theme {
+  --font-family-knewave: var(--font-knewave), cursive;
+  --font-family-inter: var(--font-inter), sans-serif;
+  --font-family-goldman: var(--font-goldman), sans-serif;
   --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
   --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+}
+
+.font-knewave {
+  font-family: var(--font-knewave), cursive;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-goldman {
+  font-family: var(--font-goldman), sans-serif;
 }
 
 :root {
