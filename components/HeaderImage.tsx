@@ -10,10 +10,10 @@ export const HeaderImage = () => {
                 <h1 className="font-knewave text-4xl text-white">Beyond!</h1>
             </div> */}
 				<div className=' absolute top-20 left-10 z-20'>
-					<h1 className='font-knewave text-4xl text-white'>Creating Web</h1>
-					<h1 className='font-knewave text-4xl text-white'>Experiences</h1>
-					<h1 className='font-knewave text-4xl text-white'>For The next</h1>
-                    <h1 className='font-knewave text-4xl text-white'>Frontier!</h1>
+					<h1 className='font-knewave md:text-7xl text-4xl text-white'>Creating Web</h1>
+					<h1 className='font-knewave md:text-7xl text-4xl text-white'>Experiences</h1>
+					<h1 className='font-knewave md:text-7xl text-4xl text-white'>For The next</h1>
+                    <h1 className='font-knewave md:text-7xl text-4xl text-white'>Frontier!</h1>
 				</div>
 			</section>
 		</>
