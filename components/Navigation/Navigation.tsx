@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export const NavBar = ({ navClass, listClass, linkClass }: {navClass: string, listClass: string, linkClass: string}) => {
 	const navigation = [
-		{ name: 'Home', href: '/one' },
-		{ name: 'Bio', href: '/bio' },
+		{ name: 'Home', href: '/' },
+		{ name: 'Bio', href: '/Bio' },
 		{ name: 'Resume', href: '/three' },
 		{ name: 'Contact', href: '/contact' },
 	];

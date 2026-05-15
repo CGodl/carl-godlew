@@ -5,3 +5,5 @@ const BioLayout = ({ children }: { children: React.ReactNode }) => {
         {children}
         </>;
 }
+
+export default BioLayout;

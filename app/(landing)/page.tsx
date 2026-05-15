@@ -3,15 +3,19 @@ import React from "react";
 import Particles from "@/components/particles";
 import {HeaderImage} from "@/components/HeaderImage";
 import { NavBarGlass } from "@/components/Navigation/Glass";
+import BioPage from "../Bio/page";
 
 
 export default function HomePage() {
 	return (
+        <>
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-coolGray-900">
             <HeaderImage/>
             <NavBarGlass />
+            
         </div>
-
+        <BioPage />
+        </>
 
 
 		

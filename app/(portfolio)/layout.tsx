@@ -1,5 +1,4 @@
 import { NavBarGlass } from '@/components/Navigation/Glass';
-import { NavBar } from '@/components/Navigation/Navigation';
 import Particles from '@/components/particles';
 
 const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
