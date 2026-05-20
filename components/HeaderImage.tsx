@@ -2,7 +2,13 @@ export const HeaderImage = () => {
 	return (
 		<>
 			<section className="flex flex-col items-center justify-center w-full h-screen bg-[url('/spaceheader.png')] bg-cover bg-no-repeat relative">
-				<div className='absolute inset-0 bg-[linear-gradient(to_bottom,rgba(11,29,38,0)_0%,rgba(11,29,38,0)_40%,rgba(11,29,38,0.8)_100%)] z-10' />
+				<div
+					className="absolute inset-0 z-10 pointer-events-none"
+					style={{
+						background:
+							'linear-gradient(to bottom, transparent 0%, rgba(11, 29, 38, 0.25) 45%, rgba(11, 29, 38, 0.65) 72%, rgba(11, 29, 38, 0.92) 88%, #0B1D26 100%)',
+					}}
+				/>
 
 				{/* <div className=" absolute top-20 left-10 z-20">
                 <h1 className="font-knewave text-4xl text-white">Prepared for</h1>
