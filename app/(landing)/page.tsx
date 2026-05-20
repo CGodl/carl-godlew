@@ -8,14 +8,14 @@ import BioPage from "../Bio/page";
 
 export default function HomePage() {
 	return (
-        <>
-        <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-coolGray-900">
+        <div className="min-h-screen bg-[#0B1D26]">
+        <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
             <HeaderImage/>
             <NavBarGlass />
             
         </div>
-        <BioPage />
-        </>
+        <BioPage className="bg-transparent" />
+        </div>
 
 
 		

@@ -1,10 +1,17 @@
 import { Card } from '@/components/ui/card';
+import { glassClassName } from '@/lib/glass';
+import { cn } from '@/lib/utils';
 
-
-export const GlassCard = ({ children, className }: { children: React.ReactNode, className?: string }) => {
+export const GlassCard = ({ children, className }: { children: React.ReactNode; className?: string }) => {
     return (
-        <Card className={`${className} bg-clip-padding backdrop-filter bg-[#0A2342]/80 border-2 border-[#6220EB]/20 rounded-xl shadow-[inset_0px_0px_12px_0px_#225599]/87.06`}>
+        <Card
+            className={cn(
+                'border-0 bg-transparent shadow-none text-white dark:border-0 dark:bg-transparent dark:text-white',
+                className,
+                glassClassName,
+            )}
+        >
             {children}
         </Card>
     );
-}
+};

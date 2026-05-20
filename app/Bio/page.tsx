@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { GlassCard } from '@/components/Card/Glass';
+import { cn } from '@/lib/utils';
 
 const techStack = [
     { icon: '⚡', label: 'Next.JS',      bg: 'bg-zinc-950' },
@@ -38,11 +39,9 @@ const testimonials = [
     { name: 'Div',  company: 'CheckerPlus', rating: 4, text: 'Amazing developer! Delivered the project on time and exceeded my expectations.' },
 ];
 
-const card = 'bg-zinc-900 border border-white/6 rounded-2xl';
-
-export default function BioPage() {
+export default function BioPage({ className }: { className?: string }) {
     return (
-        <div className="min-h-screen bg-[#0a0a0a] p-4 md:p-6 lg:p-8">
+        <div className={cn('min-h-screen bg-[#0a0a0a] p-4 md:p-6 lg:p-8', className)}>
             <div className="max-w-7xl mx-auto">
                 {/*
                  * Desktop (lg) bento grid — 4 columns, auto rows min 130 px:
@@ -56,7 +55,7 @@ export default function BioPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 auto-rows-[minmax(130px,auto)]">
 
                     {/* ── Profile ── lg: col 1, rows 1-3 */}
-                    <GlassCard className={`${card} lg:row-span-3 flex flex-col`}>
+                    <GlassCard className={`lg:row-span-3 flex flex-col`}>
                         <CardHeader className="flex-none pb-3">
                             <div className="flex flex-col items-center gap-3">
                                 <div className="relative w-20 h-20 rounded-full bg-zinc-700 flex items-center justify-center text-3xl shrink-0">
@@ -94,7 +93,7 @@ export default function BioPage() {
                     </GlassCard>
 
                     {/* ── Tech Stacks ── lg: col 2-3, row 1 */}
-                    {/* <GlassCard className={`${card} lg:col-span-2`}>
+                    {/* <GlassCard className={`lg:col-span-2`}>
                         <CardHeader className="pb-2">
                             <CardTitle className="text-white text-base flex items-center gap-2">
                                 🛠️ My Tech Stacks
@@ -116,7 +115,7 @@ export default function BioPage() {
                             </div>
                         </CardContent>
                     </GlassCard> */}
-                    <GlassCard className={`${card} lg:col-span-2`}>
+                    <GlassCard className={`lg:col-span-2`}>
                         <CardHeader className="pb-2">
                             <CardTitle className="text-white text-base flex items-center gap-2">
                                 🛠️ Who Am I?
@@ -127,7 +126,7 @@ export default function BioPage() {
 
 
                     {/* ── Work Process ── lg: col 4, rows 1-3 */}
-                    <GlassCard className={`${card} lg:row-span-3`}>
+                    <GlassCard className={`lg:row-span-3`}>
                         <CardHeader>
                             <CardTitle className="text-white text-base flex items-center gap-2">
                                 ⚙️ Work Process
@@ -155,7 +154,7 @@ export default function BioPage() {
                     {/* ── Stats ── lg: col 2-3, row 2 — nested 3-col grid inside a wrapper */}
                     <div className="lg:col-span-2 grid grid-cols-3 gap-4">
                         {stats.map(({ value, icon, label }) => (
-                            <GlassCard key={label} className={`${card} flex flex-col items-center justify-center`}>
+                            <GlassCard key={label} className={`flex flex-col items-center justify-center`}>
                                 <CardContent className="pt-6 pb-4 text-center px-2">
                                     <div className="text-2xl lg:text-3xl font-bold text-white">{value}</div>
                                     <div className="flex items-center justify-center gap-1 text-zinc-400 text-[11px] mt-1">
@@ -168,7 +167,7 @@ export default function BioPage() {
                     </div>
 
                     {/* ── Services ── lg: col 2-3, row 3 */}
-                    <GlassCard className={`${card} lg:col-span-2`}>
+                    <GlassCard className={`lg:col-span-2`}>
                         <CardHeader className="pb-2">
                             <CardTitle className="text-white text-base flex items-center gap-2">
                                 ⚡ Services
@@ -192,7 +191,7 @@ export default function BioPage() {
                     </GlassCard>
 
                     {/* ── Projects ── lg: col 1-2, row 4 */}
-                    <GlassCard className={`${card} lg:col-span-2`}>
+                    <GlassCard className={`lg:col-span-2`}>
                         <CardHeader>
                             <CardTitle className="text-white text-base flex items-center gap-2">
                                 💼 Projects
@@ -218,7 +217,7 @@ export default function BioPage() {
                     </GlassCard>
 
                     {/* ── CTA ── lg: col 3-4, row 4 */}
-                    {/* <GlassCard className={`${card} lg:col-span-2`}>
+                    {/* <GlassCard className={`lg:col-span-2`}>
                         <CardContent className="flex flex-col items-center justify-center h-full text-center py-8">
                             <div className="text-4xl mb-3">🤝</div>
                             <h3 className="text-white font-semibold text-lg mb-1">Let&apos;s work together</h3>
@@ -235,7 +234,7 @@ export default function BioPage() {
                     </GlassCard> */}
 
                     {/* ── Testimonials ── lg: col 1-4, rows 5-6 */}
-                    {/* <GlassCard className={`${card} lg:col-span-4 lg:row-span-2`}>
+                    {/* <GlassCard className={`lg:col-span-4 lg:row-span-2`}>
                         <CardHeader>
                             <CardTitle className="text-white text-base flex items-center gap-2">
                                 💬 Testimonials
