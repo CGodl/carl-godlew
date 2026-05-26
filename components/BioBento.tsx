@@ -75,7 +75,7 @@ export function BioBento({ className }: { className?: string }) {
 
                     {/* Row 3 */}
                     <SpacePanel className="md:col-span-2">
-                        <SectionTitle subtitle="Tools & technologies">Tech Stack</SectionTitle>
+                        <SectionTitle subtitle="Some of the technologies I've worked with">Technologies</SectionTitle>
                         <div className="flex flex-wrap gap-2">
                             {services.map((s) => (
                                 <span key={s} className="px-2.5 py-1 text-xs text-zinc-200 rounded border border-white/12 bg-[#060d14]/50 hover:border-purple-400/35 transition-colors">

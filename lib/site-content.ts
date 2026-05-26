@@ -45,9 +45,8 @@ export const siteContent = {
             href: 'https://github.com/CGodl',
         },
         {
-            title: 'Portfolio Website',
-            description:
-                'Modern space-themed developer portfolio built with Next.js, featuring project showcases, resume embed, and contact integration.',
+            title: 'Portfolio Website (This Website)',
+            description: "Yes! The website you're viewing right now! I experimented on and off with creating a updated version of my original portfolio that used Next.js, TailWind, and TypeScript to create a website more in line with my interests and technologies. Originally designed in Figma, I then built out a skeleton leveraging Cursor and implemented the finalized design.",
             image: '/projects/portfolio.png',
             imageAlt: 'Portfolio homepage',
             tags: ['Next.js', 'Tailwind', 'TypeScript'],
