@@ -11,7 +11,7 @@ export function ResumePreview() {
                 <SpacePanel>
                     <SectionTitle subtitle="Download or view full document">Resume</SectionTitle>
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                        <p className="font-mono-digital text-sm text-zinc-400 tracking-wide">
+                        <p className="font-mono-digital text-sm text-zinc-300 tracking-wide">
                             {siteContent.resume.summary}
                         </p>
                         <div className="flex gap-3 shrink-0">

@@ -56,7 +56,7 @@ export function BioBento({ className }: { className?: string }) {
 
                     <SpacePanel className="md:col-span-2 flex flex-col justify-center">
                         <SectionTitle subtitle="Background">Who Am I</SectionTitle>
-                        <p className="text-zinc-300 text-sm leading-relaxed">
+                        <p className="text-zinc-200 text-sm leading-relaxed">
                             {siteContent.tagline} {siteContent.bio.headline}
                         </p>
                     </SpacePanel>
@@ -67,7 +67,7 @@ export function BioBento({ className }: { className?: string }) {
                             <span className="font-orbitron text-3xl text-transparent bg-clip-text bg-gradient-to-b from-blue-300 to-purple-400">
                                 {value}
                             </span>
-                            <span className="font-mono-digital text-[10px] uppercase tracking-[0.2em] text-zinc-500 mt-2">
+                            <span className="font-mono-digital text-[10px] uppercase tracking-[0.2em] text-zinc-400 mt-2">
                                 {label}
                             </span>
                         </SpacePanel>
@@ -78,7 +78,7 @@ export function BioBento({ className }: { className?: string }) {
                         <SectionTitle subtitle="Tools & technologies">Tech Stack</SectionTitle>
                         <div className="flex flex-wrap gap-2">
                             {services.map((s) => (
-                                <span key={s} className="px-2.5 py-1 text-xs text-zinc-300 rounded border border-white/5 bg-[#060d14]/50 hover:border-purple-500/25 transition-colors">
+                                <span key={s} className="px-2.5 py-1 text-xs text-zinc-200 rounded border border-white/12 bg-[#060d14]/50 hover:border-purple-400/35 transition-colors">
                                     {s}
                                 </span>
                             ))}
@@ -109,11 +109,11 @@ export function BioBento({ className }: { className?: string }) {
                             {workSteps.map(({ n, title, desc }) => (
                                 <div
                                     key={n}
-                                    className="rounded-md border border-white/5 bg-[#060d14]/40 p-4 hover:border-blue-500/15 transition-colors"
+                                    className="rounded-md border border-white/12 bg-[#060d14]/40 p-4 hover:border-blue-400/35 transition-colors"
                                 >
                                     <span className="font-orbitron text-xs text-purple-400/80">{n}</span>
                                     <p className="text-white text-sm font-medium mt-2">{title}</p>
-                                    <p className="text-zinc-500 text-xs mt-1 leading-relaxed">{desc}</p>
+                                    <p className="text-zinc-400 text-xs mt-1 leading-relaxed">{desc}</p>
                                 </div>
                             ))}
                         </div>

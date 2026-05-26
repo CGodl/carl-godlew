@@ -32,7 +32,7 @@ export function BioProfile() {
                         <p className="text-zinc-300 text-sm leading-relaxed">
                             {siteContent.tagline} {siteContent.bio.headline}
                         </p>
-                        <p className="text-zinc-500 text-sm leading-relaxed">
+                        <p className="text-zinc-400 text-sm leading-relaxed">
                             {siteContent.bio.extended}
                         </p>
                     </div>
@@ -43,7 +43,7 @@ export function BioProfile() {
                         ].map(({ label, code }) => (
                             <span
                                 key={label}
-                                className="font-mono-digital text-[10px] uppercase tracking-widest px-2.5 py-1 text-zinc-400 rounded border border-white/5 bg-[#060d14]/50"
+                                className="font-mono-digital text-[10px] uppercase tracking-widest px-2.5 py-1 text-zinc-400 rounded border border-white/12 bg-[#060d14]/50"
                             >
                                 {code}: {label}
                             </span>

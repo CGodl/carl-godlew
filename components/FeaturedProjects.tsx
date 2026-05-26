@@ -7,14 +7,14 @@ import { cn } from '@/lib/utils';
 import { siteContent } from '@/lib/site-content';
 
 export function FeaturedProjects() {
-    const projects = siteContent.projects.slice(0, 4);
+    const projects = siteContent.projects.slice(0, 3);
 
     return (
         <section className="px-4 md:px-6 lg:px-8 pb-10">
             <div className="mx-auto max-w-6xl">
                 <SpacePanel>
                     <SectionTitle subtitle="Recent work & side projects">Featured Projects</SectionTitle>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-4">
                         {projects.map((project) => (
                             <ProjectCard key={project.title} {...project} />
                         ))}

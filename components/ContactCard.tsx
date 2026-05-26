@@ -17,7 +17,7 @@ function SocialIcon({ social }: { social: SocialLink }) {
             href={social.href}
             target={social.icon === 'email' ? undefined : '_blank'}
             rel={social.icon === 'email' ? undefined : 'noopener noreferrer'}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-md border border-white/5 bg-[#060d14]/50 hover:border-purple-500/25 text-zinc-300 hover:text-purple-300 text-sm transition-colors"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-md border border-white/12 bg-[#060d14]/50 hover:border-purple-400/35 text-zinc-300 hover:text-purple-300 text-sm transition-colors"
         >
             <Icon className="w-4 h-4 text-blue-400/70" />
             <span className="font-mono-digital text-[11px] uppercase tracking-wider">{social.name}</span>
@@ -46,7 +46,7 @@ export function ContactCard() {
                     {email}
                 </a>
 
-                <p className="font-mono-digital text-[11px] text-zinc-600 uppercase tracking-widest">
+                <p className="font-mono-digital text-[11px] text-zinc-500 uppercase tracking-widest">
                     {location} · {timezone}
                 </p>
 

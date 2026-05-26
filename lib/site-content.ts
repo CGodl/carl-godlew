@@ -1,6 +1,8 @@
 export type Project = {
     title: string;
     description: string;
+    image: string;
+    imageAlt?: string;
     tags?: string[];
     href?: string;
 };
@@ -34,25 +36,38 @@ export const siteContent = {
 
     projects: [
         {
+            title: 'Garbo',
+            description:
+                'A budget and expense tracking app for organizing personal finances, managing spending categories, and visualizing monthly trends.',
+            image: '/projects/garbo.png',
+            imageAlt: 'Garbo homepage',
+            tags: ['React', 'Ruby on Rails', 'PostgreSQL', 'Tailwind'],
+            href: 'https://github.com/CGodl',
+        },
+        {
             title: 'Portfolio Website',
-            description: 'Modern space-themed portfolio with Next.js and Tailwind CSS.',
+            description:
+                'Modern space-themed developer portfolio built with Next.js, featuring project showcases, resume embed, and contact integration.',
+            image: '/projects/portfolio.png',
+            imageAlt: 'Portfolio homepage',
             tags: ['Next.js', 'Tailwind', 'TypeScript'],
             href: 'https://github.com/CGodl/carl-godlew',
         },
         {
             title: 'E-commerce Platform',
-            description: 'Full-stack shopping experience with cart, checkout, and admin tools.',
+            description:
+                'Full-stack shopping experience with cart, checkout flow, product catalog, and admin tooling for inventory management.',
+            image: '/projects/ecommerce.png',
+            imageAlt: 'E-commerce homepage',
             tags: ['React', 'Node.js', 'PostgreSQL'],
         },
         {
             title: 'Dashboard App',
-            description: 'Analytics dashboard with real-time data visualization.',
+            description:
+                'Analytics dashboard with real-time data visualization, filterable reports, and exportable metrics for team stakeholders.',
+            image: '/projects/dashboard.png',
+            imageAlt: 'Dashboard homepage',
             tags: ['React', 'Redux', 'Chart.js'],
-        },
-        {
-            title: 'Rails API Service',
-            description: 'RESTful API built with Ruby on Rails for internal tooling.',
-            tags: ['Ruby on Rails', 'SQL', 'API'],
         },
     ] satisfies Project[],
 

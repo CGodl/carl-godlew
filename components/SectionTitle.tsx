@@ -15,7 +15,7 @@ export function SectionTitle({
                 {children}
             </h2>
             {subtitle && (
-                <p className="font-mono-digital text-[11px] text-zinc-500 mt-1.5 tracking-wide">
+                <p className="font-mono-digital text-[11px] text-zinc-400 mt-1.5 tracking-wide">
                     {subtitle}
                 </p>
             )}

@@ -8,7 +8,7 @@ export default function ProjectsPage() {
         <div className="px-4 md:px-6 lg:px-8 py-10 md:py-14 max-w-6xl mx-auto">
             <SpacePanel>
                 <SectionTitle subtitle="Work I&apos;ve built and contributed to">Projects</SectionTitle>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-4">
                     {siteContent.projects.map((project) => (
                         <ProjectCard key={project.title} {...project} />
                     ))}

@@ -13,7 +13,7 @@ export function TravelGallery({ photos }: { photos: TravelPhoto[] }) {
                     <div
                         key={`${photo.src}-${i}`}
                         className={cn(
-                            'relative rounded-md overflow-hidden ring-1 ring-white/5 hover:ring-purple-500/30 transition-all',
+                            'relative rounded-md overflow-hidden ring-1 ring-white/12 hover:ring-purple-400/35 transition-all',
                             photo.className ?? 'col-span-1 row-span-1',
                         )}
                     >
