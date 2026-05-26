@@ -4,6 +4,8 @@
   --font-family-knewave: var(--font-knewave), cursive;
   --font-family-inter: var(--font-inter), sans-serif;
   --font-family-goldman: var(--font-goldman), sans-serif;
+  --font-family-orbitron: var(--font-orbitron), sans-serif;
+  --font-family-mono-digital: var(--font-share-tech-mono), monospace;
   --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
   --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
 }
@@ -20,26 +22,48 @@
   font-family: var(--font-goldman), sans-serif;
 }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.font-orbitron {
+  font-family: var(--font-orbitron), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.font-mono-digital {
+  font-family: var(--font-share-tech-mono), monospace;
+}
+
+:root {
+  --space-bg: #0B1D26;
+  --space-bg-deep: #060d12;
+  --space-accent-blue: #3b82f6;
+  --space-accent-purple: #8b5cf6;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #e2e8f0;
+  background-color: var(--space-bg);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
 }

@@ -4,7 +4,7 @@ export const NavBar = ({ navClass, listClass, linkClass }: {navClass: string, li
 	const navigation = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Bio', href: '/Bio' },
-		{ name: 'Resume', href: '/three' },
+		{ name: 'Resume', href: '/resume' },
 		{ name: 'Contact', href: '/contact' },
 	];
 
