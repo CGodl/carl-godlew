@@ -19,7 +19,7 @@ const workSteps = [
 const stats = [
     { value: '13+', icon: '💼', label: 'Projects' },
     { value: '7+',  icon: '👥', label: 'Clients' },
-    { value: '4+',  icon: '⭐', label: 'Yrs Expertise' },
+    { value: '5+',  icon: '⭐', label: 'Years of Experience' },
 ];
 
 const services = [
@@ -42,7 +42,7 @@ const testimonials = [
 export default function BioPage({ className }: { className?: string }) {
     return (
         <div className={cn('min-h-screen bg-[#0a0a0a] p-4 md:p-6 lg:p-8', className)}>
-            <div className="max-w-7xl mx-auto">
+            <div className="mx-auto"> {/* max-w-7xl */}
                 {/*
                  * Desktop (lg) bento grid — 4 columns, auto rows min 130 px:
                  *
@@ -93,35 +93,15 @@ export default function BioPage({ className }: { className?: string }) {
                     </GlassCard>
 
                     {/* ── Tech Stacks ── lg: col 2-3, row 1 */}
-                    {/* <GlassCard className={`lg:col-span-2`}>
-                        <CardHeader className="pb-2">
-                            <CardTitle className="text-white text-base flex items-center gap-2">
-                                🛠️ My Tech Stacks
-                            </CardTitle>
-                            <CardDescription className="text-zinc-400 text-xs">
-                                My favorite tech stack I use on my projects
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="grid grid-cols-2 gap-3">
-                                {techStack.map(({ icon, label, bg }) => (
-                                    <div key={label} className="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/60 border border-white/4">
-                                        <div className={`w-9 h-9 rounded-lg ${bg} flex items-center justify-center text-lg shrink-0`}>
-                                            {icon}
-                                        </div>
-                                        <span className="text-white text-sm font-medium">{label}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </CardContent>
-                    </GlassCard> */}
                     <GlassCard className={`lg:col-span-2`}>
                         <CardHeader className="pb-2">
                             <CardTitle className="text-white text-base flex items-center gap-2">
                                 🛠️ Who Am I?
                             </CardTitle>
                         </CardHeader>
-                       
+                        <CardContent>
+                           <p className="text-zinc-300 text-sm">Software Engineer with experience in Ruby on Rails, Javascript, React, Rails, Redux, SQL, and MERN development. My passion is using my experiences and know-how to develop solutions to challenges in the tech sphere.</p>                           
+                        </CardContent>
                     </GlassCard>
 
 
@@ -170,10 +150,10 @@ export default function BioPage({ className }: { className?: string }) {
                     <GlassCard className={`lg:col-span-2`}>
                         <CardHeader className="pb-2">
                             <CardTitle className="text-white text-base flex items-center gap-2">
-                                ⚡ Services
+                                ⚡ Tech Stack
                             </CardTitle>
                             <CardDescription className="text-zinc-400 text-xs">
-                                My services are tailored to your needs and budget
+                                Some of my favorite technologies. Click for an outline of my experience.
                             </CardDescription>
                         </CardHeader>
                         <CardContent>
@@ -189,7 +169,7 @@ export default function BioPage({ className }: { className?: string }) {
                             </div>
                         </CardContent>
                     </GlassCard>
-
+                    
                     {/* ── Projects ── lg: col 1-2, row 4 */}
                     <GlassCard className={`lg:col-span-2`}>
                         <CardHeader>
