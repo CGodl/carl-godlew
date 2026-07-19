@@ -18,6 +18,10 @@ export default function HomePage() {
                     style={{
                         background:
                             'radial-gradient(ellipse at 20% 0%, rgba(59,130,246,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 100%, rgba(139,92,246,0.06) 0%, transparent 50%)',
+                        maskImage:
+                            'linear-gradient(to bottom, transparent 0%, black 25%)',
+                        WebkitMaskImage:
+                            'linear-gradient(to bottom, transparent 0%, black 25%)',
                     }}
                 />
                 <Particles

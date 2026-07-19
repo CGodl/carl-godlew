@@ -14,9 +14,9 @@ const workSteps = [
 ];
 
 const stats = [
+    { value: '5+', label: 'Years of Experience' },
     { value: '13+', label: 'Projects' },
     { value: '7+', label: 'Clients' },
-    { value: '5+', label: 'Years' },
 ];
 
 const services = [

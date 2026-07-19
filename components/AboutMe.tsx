@@ -89,8 +89,7 @@ const AboutMe = () => {
 				<BentoGrid />
 				<div>
 					<h4>
-						Software Engineer with experience in Ruby on Rails, Javascript,
-						React, Rails, Redux, SQL, and MERN development. My passion is using
+						Full-Stack Software Engineer with extensive experience working in NextJs, React, TypeScript, Python, and SQL. My passion is using
 						my experiences and know-how to develop solutions to challenges in
 						the tech sphere.
 					</h4>

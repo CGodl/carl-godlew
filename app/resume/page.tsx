@@ -20,9 +20,6 @@ export default function ResumePage() {
                         title="Carl Godlewski Resume"
                         className="w-full h-[80vh] min-h-[500px]"
                     />
-                    <p className="font-mono-digital text-[10px] text-zinc-600 p-4 text-center tracking-widest uppercase border-t border-white/5">
-                        Add resume as public/resume.pdf
-                    </p>
                 </div>
             </div>
         </SiteShell>
