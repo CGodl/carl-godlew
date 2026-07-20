@@ -1,5 +1,4 @@
 import { NavBarGlass } from '@/components/Navigation/Glass';
-import Particles from '@/components/particles';
 import StarParticles from '@/components/StarParticles';
 import { cn } from '@/lib/utils';
 
