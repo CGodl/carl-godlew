@@ -1,5 +1,5 @@
-import Particles from '@/components/particles';
-// #TODO: Add typewriter affect to signal acquired
+import StarParticles from '@/components/StarParticles';
+
 export const HeaderImage = () => {
     return (
         <section className="flex flex-col items-center justify-center w-full h-screen bg-[url('/spaceHeader.png')] bg-cover bg-no-repeat relative overflow-hidden">
@@ -10,12 +10,9 @@ export const HeaderImage = () => {
                         'linear-gradient(to bottom, rgba(11, 29, 38, 0) 0%, rgba(11, 29, 38, 0.15) 35%, rgba(11, 29, 38, 0.55) 58%, rgba(11, 29, 38, 0.88) 75%, var(--space-bg) 90%)',
                 }}
             />
-            <Particles
+            <StarParticles
+                id="header-stars"
                 className="absolute inset-0 z-[15] pointer-events-none"
-                variant="header"
-                quantity={120}
-                staticity={50}
-                ease={45}
             />
             <div className="absolute top-20 left-6 md:left-10 z-20 max-w-2xl">
                 <div>

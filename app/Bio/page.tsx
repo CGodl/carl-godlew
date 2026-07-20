@@ -3,7 +3,7 @@ import { BioProfile } from '@/components/BioProfile';
 
 export default function BioPage() {
     return (
-        <SiteShell>
+        <SiteShell stars={true}>
             <BioProfile />
         </SiteShell>
     );

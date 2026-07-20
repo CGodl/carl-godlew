@@ -29,7 +29,7 @@ export function ContactCard() {
     const { email, location, timezone, socials } = siteContent.contact;
 
     return (
-        <SpacePanel className="w-full max-w-lg">
+        <SpacePanel className={`w-full max-w-lg`}>
             <SectionTitle subtitle="Open comms channel">Contact</SectionTitle>
             <div className="text-center space-y-5">
                 <div>
@@ -39,12 +39,12 @@ export function ContactCard() {
                     </p>
                 </div>
 
-                <a
+                {/* <a
                     href={`mailto:${email}`}
                     className="block font-mono-digital text-sm text-zinc-400 hover:text-purple-300 transition-colors tracking-wide"
                 >
                     {email}
-                </a>
+                </a> */}
 
                 <p className="font-mono-digital text-[11px] text-zinc-500 uppercase tracking-widest">
                     {location} · {timezone}

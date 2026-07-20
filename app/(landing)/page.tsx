@@ -3,12 +3,11 @@ import { NavBarGlass } from '@/components/Navigation/Glass';
 import { BioBento } from '@/components/BioBento';
 import { FeaturedProjects } from '@/components/FeaturedProjects';
 import { ResumePreview } from '@/components/ResumePreview';
-import Particles from '@/components/particles';
 
 export default function HomePage() {
     return (
         <div className="min-h-screen bg-[#0B1D26]">
-            <div className="relative flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
+            <div className="relative flex flex-col items-center justify-center w-full h-screen overflow-hidden">
                 <HeaderImage />
                 <NavBarGlass />
             </div>
@@ -23,11 +22,7 @@ export default function HomePage() {
                         WebkitMaskImage:
                             'linear-gradient(to bottom, transparent 0%, black 25%)',
                     }}
-                />
-                <Particles
-                    className="absolute inset-0 -z-10 animate-fade-in"
-                    quantity={100}
-                />
+                />               
                 <BioBento className="bg-transparent" />
                 <FeaturedProjects />
                 <ResumePreview />

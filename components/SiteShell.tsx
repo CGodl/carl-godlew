@@ -1,13 +1,16 @@
 import { NavBarGlass } from '@/components/Navigation/Glass';
 import Particles from '@/components/particles';
+import StarParticles from '@/components/StarParticles';
 import { cn } from '@/lib/utils';
 
 export function SiteShell({
     children,
     className,
+    stars = false,
 }: {
     children: React.ReactNode;
     className?: string;
+    stars?: boolean;
 }) {
     return (
         <div className={cn('relative min-h-screen bg-[#0B1D26]', className)}>
@@ -18,12 +21,12 @@ export function SiteShell({
                         'radial-gradient(ellipse at 20% 0%, rgba(59,130,246,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 100%, rgba(139,92,246,0.06) 0%, transparent 50%)',
                 }}
             />
-            <Particles
-                className="absolute inset-0 -z-10 animate-fade-in"
-                quantity={100}
-            />
+            {stars && <StarParticles
+                id="header-stars"
+                className="absolute inset-0 z-0 pointer-events-none"
+            />}
             <NavBarGlass />
-            <main className="relative z-0">{children}</main>
+            <main className="relative z-10">{children}</main>
         </div>
     );
 }

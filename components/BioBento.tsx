@@ -28,7 +28,7 @@ export function BioBento({ className }: { className?: string }) {
     return (
         <section className={cn('px-4 md:px-6 lg:px-8 py-10 md:py-14', className)}>
             <div className="mx-auto max-w-6xl">
-                <SectionTitle subtitle="Overview">Mission Control</SectionTitle>
+                <SectionTitle subtitle="Overview">Dashboard</SectionTitle>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {/* Row 1 */}
@@ -49,9 +49,9 @@ export function BioBento({ className }: { className?: string }) {
                                 {siteContent.role}
                             </p>
                         </div>
-                        <span className="font-mono-digital text-[10px] uppercase tracking-widest px-2.5 py-1 rounded border border-emerald-500/25 text-emerald-400/90 bg-emerald-950/20">
-                            Available
-                        </span>
+                        <p className="font-mono-digital text-[11px] uppercase tracking-widest">
+                            {siteContent.bio.location} · {siteContent.bio.timezone}
+                        </p>
                     </SpacePanel>
 
                     <SpacePanel className="md:col-span-2 flex flex-col justify-center">
@@ -61,7 +61,17 @@ export function BioBento({ className }: { className?: string }) {
                         </p>
                     </SpacePanel>
 
-                    {/* Row 2 — equal stats */}
+                    <SpacePanel className="md:col-span-3">
+                        <SectionTitle subtitle="Some of the technologies I've worked with">Technologies</SectionTitle>
+                        <div className="flex flex-wrap gap-2">
+                            {services.map((s) => (
+                                <span key={s} className="px-2.5 py-1 text-xs text-zinc-200 rounded border border-white/12 bg-[#060d14]/50 hover:border-purple-400/35 transition-colors">
+                                    {s}
+                                </span>
+                            ))}
+                        </div>
+                    </SpacePanel>
+
                     {stats.map(({ value, label }) => (
                         <SpacePanel key={label} className="flex flex-col items-center justify-center text-center py-6">
                             <span className="font-orbitron text-3xl text-transparent bg-clip-text bg-gradient-to-b from-blue-300 to-purple-400">
@@ -73,19 +83,10 @@ export function BioBento({ className }: { className?: string }) {
                         </SpacePanel>
                     ))}
 
-                    {/* Row 3 */}
-                    <SpacePanel className="md:col-span-2">
-                        <SectionTitle subtitle="Some of the technologies I've worked with">Technologies</SectionTitle>
-                        <div className="flex flex-wrap gap-2">
-                            {services.map((s) => (
-                                <span key={s} className="px-2.5 py-1 text-xs text-zinc-200 rounded border border-white/12 bg-[#060d14]/50 hover:border-purple-400/35 transition-colors">
-                                    {s}
-                                </span>
-                            ))}
-                        </div>
-                    </SpacePanel>
+                    
+                   
 
-                    <SpacePanel className="flex flex-col justify-center gap-3">
+                    {/* <SpacePanel className="flex flex-col justify-center gap-3">
                         <SectionTitle subtitle="Coordinates">Signal</SectionTitle>
                         {[
                             { label: 'English', code: 'EN' },
@@ -100,10 +101,10 @@ export function BioBento({ className }: { className?: string }) {
                         <span className="mt-1 font-mono-digital text-[10px] uppercase tracking-widest text-purple-400/70">
                             Freelancer
                         </span>
-                    </SpacePanel>
+                    </SpacePanel> */}
 
                     {/* Row 4 — horizontal process */}
-                    <SpacePanel className="md:col-span-3">
+                    {/* <SpacePanel className="md:col-span-3">
                         <SectionTitle subtitle="How we work together">Work Process</SectionTitle>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             {workSteps.map(({ n, title, desc }) => (
@@ -117,7 +118,7 @@ export function BioBento({ className }: { className?: string }) {
                                 </div>
                             ))}
                         </div>
-                    </SpacePanel>
+                    </SpacePanel> */}
                 </div>
             </div>
         </section>

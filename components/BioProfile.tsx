@@ -6,10 +6,10 @@ import { siteContent } from '@/lib/site-content';
 
 export function BioProfile() {
     return (
-        <div className="px-4 md:px-6 lg:px-8 py-10 md:py-14 space-y-8 max-w-6xl mx-auto">
+        <div className={`px-4 md:px-6 lg:px-8 py-10 md:py-14 space-y-8 max-w-6xl mx-auto z-100`}>
             <SectionTitle subtitle="Personal dossier">Bio</SectionTitle>
 
-            <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-4 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-4 items-stretch z-100">
                 <SpacePanel className="p-3 flex items-center justify-center">
                     <div className="relative aspect-[3/4] w-full max-w-[240px] rounded-md overflow-hidden ring-1 ring-purple-500/20">
                         <Image
@@ -22,7 +22,6 @@ export function BioProfile() {
                         />
                     </div>
                 </SpacePanel>
-
                 <SpacePanel className="flex flex-col justify-center">
                     <p className="font-orbitron text-lg tracking-wider text-white">{siteContent.name}</p>
                     <p className="font-mono-digital text-xs text-purple-400/80 mt-1 uppercase tracking-[0.2em]">
