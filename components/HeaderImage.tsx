@@ -2,7 +2,7 @@ import StarParticles from '@/components/StarParticles';
 
 export const HeaderImage = () => {
     return (
-        <section className="flex flex-col items-center justify-center w-full h-screen bg-[url('/spaceHeader.png')] bg-cover bg-no-repeat relative overflow-hidden">
+        <section className="flex flex-col items-center justify-center w-full h-screen bg-[url('/spaceHeader.webp')] bg-cover bg-no-repeat relative overflow-hidden">
             <div
                 className="absolute inset-0 z-10 pointer-events-none"
                 style={{

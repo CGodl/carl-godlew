@@ -13,11 +13,12 @@ const initEngine = async (engine: Engine) => {
 const starOptions: ISourceOptions = {
     fullScreen: { enable: false },
     background: { color: { value: 'transparent' } },
-    fpsLimit: 60,
+    fpsLimit: 30,
     detectRetina: true,
+    pauseOnOutsideViewport: true,
     particles: {
         number: {
-            value: 900,
+            value: 600,
             density: { enable: true },
         },
         color: { value: '#ffffff' },
