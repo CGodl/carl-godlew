@@ -82,13 +82,13 @@ export const siteContent = {
     ] satisfies TravelPhoto[],
 
     contact: {
-        email: 'carl.godlewski@example.com',
+        email: 'cgodlew@gmail.com',
         location: 'New York City, USA',
         timezone: 'UTC-5',
         socials: [
             { name: 'GitHub', href: 'https://github.com/CGodl', icon: 'github' },
             { name: 'LinkedIn', href: 'https://linkedin.com/in/carl-godlewski', icon: 'linkedin' },
-            { name: 'Email', href: 'mailto:carl.godlewski@example.com', icon: 'email' },
+            { name: 'Email', href: 'mailto:cgodlew@gmail.com', icon: 'email' },
         ] satisfies SocialLink[],
     },
 
