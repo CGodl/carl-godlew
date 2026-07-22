@@ -26,7 +26,7 @@ const services = [
 
 export function BioBento({ className }: { className?: string }) {
     return (
-        <section className={cn('px-4 md:px-6 lg:px-8 py-10 md:py-14', className)}>
+        <section className={cn('px-4 md:px-6 lg:px-8', className)}>
             <div className="mx-auto max-w-6xl">
                 <SectionTitle subtitle="Overview">Dashboard</SectionTitle>
 
@@ -55,13 +55,13 @@ export function BioBento({ className }: { className?: string }) {
                     </SpacePanel>
 
                     <SpacePanel className="md:col-span-2 flex flex-col justify-center">
-                        <SectionTitle subtitle="Background">Who Am I</SectionTitle>
+                        <SectionTitle subtitle="A little about me">Background</SectionTitle>
                         <p className="text-zinc-200 text-sm leading-relaxed">
                             {siteContent.tagline} {siteContent.bio.headline}
                         </p>
                     </SpacePanel>
 
-                    <SpacePanel className="md:col-span-3">
+                    {/* <SpacePanel className="md:col-span-3">
                         <SectionTitle subtitle="Some of the technologies I've worked with">Technologies</SectionTitle>
                         <div className="flex flex-wrap gap-2">
                             {services.map((s) => (
@@ -81,27 +81,7 @@ export function BioBento({ className }: { className?: string }) {
                                 {label}
                             </span>
                         </SpacePanel>
-                    ))}
-
-                    
-                   
-
-                    {/* <SpacePanel className="flex flex-col justify-center gap-3">
-                        <SectionTitle subtitle="Coordinates">Signal</SectionTitle>
-                        {[
-                            { label: 'English', code: 'EN' },
-                            { label: siteContent.bio.location, code: 'LOC' },
-                            { label: siteContent.bio.timezone, code: 'TZ' },
-                        ].map(({ label, code }) => (
-                            <div key={label} className="flex items-center justify-between text-sm">
-                                <span className="font-mono-digital text-[10px] text-blue-400/60">{code}</span>
-                                <span className="text-zinc-300">{label}</span>
-                            </div>
-                        ))}
-                        <span className="mt-1 font-mono-digital text-[10px] uppercase tracking-widest text-purple-400/70">
-                            Freelancer
-                        </span>
-                    </SpacePanel> */}
+                    ))} */}
 
                     {/* Row 4 — horizontal process */}
                     {/* <SpacePanel className="md:col-span-3">

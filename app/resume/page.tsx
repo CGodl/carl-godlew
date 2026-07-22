@@ -1,5 +1,6 @@
 import { SiteShell } from '@/components/SiteShell';
 import { SectionTitle } from '@/components/SectionTitle';
+import { ResumeDocument } from '@/components/ResumeDocument';
 import { buttonPrimaryClassName } from '@/lib/space-theme';
 import { siteContent } from '@/lib/site-content';
 
@@ -14,13 +15,7 @@ export default function ResumePage() {
                     </a>
                 </div>
 
-                <div className="rounded-lg overflow-hidden border border-blue-500/10 bg-[#060d14]/40">
-                    <iframe
-                        src={siteContent.resume.pdfPath}
-                        title="Carl Godlewski Resume"
-                        className="w-full h-[80vh] min-h-[500px]"
-                    />
-                </div>
+                <ResumeDocument />
             </div>
         </SiteShell>
     );

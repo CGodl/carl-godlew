@@ -3,6 +3,7 @@ import { NavBarGlass } from '@/components/Navigation/Glass';
 import { BioBento } from '@/components/BioBento';
 import { FeaturedProjects } from '@/components/FeaturedProjects';
 import { ResumePreview } from '@/components/ResumePreview';
+import { Skills } from '@/components/Skills';
 
 export default function HomePage() {
     return (
@@ -24,8 +25,9 @@ export default function HomePage() {
                     }}
                 />               
                 <BioBento className="bg-transparent" />
+                <Skills />
                 <FeaturedProjects />
-                <ResumePreview />
+                {/* <ResumePreview /> */}
             </div>
         </div>
     );
