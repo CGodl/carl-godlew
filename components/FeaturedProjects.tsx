@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 import { siteContent } from '@/lib/site-content';
 
 export function FeaturedProjects() {
-    const projects = siteContent.projects.slice(0, 3);
+    const projects = siteContent.projects;
 
     return (
         <section className="px-4 md:px-6 lg:px-8 pb-10">

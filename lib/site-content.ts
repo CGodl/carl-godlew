@@ -4,7 +4,8 @@ export type Project = {
     image: string;
     imageAlt?: string;
     tags?: string[];
-    href?: string;
+    siteHref?: string;
+    githubHref?: string;
 };
 
 export type TravelPhoto = {
@@ -43,16 +44,65 @@ export const siteContent = {
             image: '/projects/spaceHeader.webp',
             imageAlt: 'Portfolio homepage',
             tags: ['Next.js', 'Tailwind', 'TypeScript'],
-            href: 'https://github.com/CGodl/carl-godlew',
+            siteHref: 'https://carlgodlewski.com',
+            githubHref: 'https://github.com/CGodl/carl-godlew',
         },
         {
             title: 'Garbo',
             description:
-                'A budget and expense tracking app for organizing personal finances, managing spending categories, and visualizing monthly trends.',
+                'Worked as the sole Frontend Engineer 2021-2022. Garbo was a background checking web application used by over one million unique users and built on React with SaSS styling.',
             image: '/projects/garbo.png',
             imageAlt: 'Garbo homepage',
             tags: ['React', 'Ruby on Rails', 'PostgreSQL', 'Tailwind'],
-            href: 'https://github.com/CGodl',
+        },
+        {
+            title: 'GealAi',
+            description:
+                'Experience the future with an AI-driven web app that seamlessly generates conversations, coding assistance, and music. Transform your ideas into reality with the ultimate multitasking marvel, redefining the way you engage with technology.',
+            image: '/projects/gealai.png',
+            imageAlt: 'GealAi homepage',
+            tags: ['Next.js', 'AI', 'TypeScript'],
+            siteHref: 'https://gael-ai.vercel.app/',
+            githubHref: 'https://github.com/CGodl/GaelAi',
+        },
+        {
+            title: 'LessTravelled',
+            description:
+                'See the hidden gems of your next road-trip. Take part in a user-curated site tracking roadside attractions.',
+            image: '/projects/lesstravelled.png',
+            imageAlt: 'LessTravelled homepage',
+            tags: ['React', 'Redux'],
+            siteHref: 'https://less-travelled.herokuapp.com/#/',
+            githubHref: 'https://github.com/ColtW27/Less-Travelled-',
+        },
+        {
+            title: 'GalaxyEye',
+            description: 'Application to track data on upcoming rocket launches around the world.',
+            image: '/projects/galaxyeye.png',
+            imageAlt: 'GalaxyEye homepage',
+            tags: ['React', 'API'],
+            siteHref: 'https://cgodl.github.io/galaxyeye/',
+            githubHref: 'https://github.com/CGodl/galaxyeye',
+        },
+        {
+            title: 'Cleverbreak',
+            description:
+                'A clone of Splitwise. Cleverbreak allows users to draft and track IOUs between themselves and other users.',
+            image: '/projects/cleverbreak.png',
+            imageAlt: 'Cleverbreak homepage',
+            tags: ['React', 'Redux', 'Ruby on Rails'],
+            siteHref: 'https://cleverbreak.herokuapp.com/#/',
+            githubHref: 'https://github.com/CGodl/CleverBreak',
+        },
+        {
+            title: 'Mintrello',
+            description:
+                'Designed as part of the Mintbean Hackathon challenge on 8/28/20. The goal was to create a working kanban board over the weekend. Final project was a noted runner-up in the competition.',
+            image: '/projects/mintrello.png',
+            imageAlt: 'Mintrello homepage',
+            tags: ['React', 'Redux'],
+            siteHref: 'https://cgodl.github.io/mintrello/#/',
+            githubHref: 'https://github.com/CGodl/mintrello',
         }
     ] satisfies Project[],
 

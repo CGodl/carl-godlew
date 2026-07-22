@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import type { Project } from '@/lib/site-content';
 import { panelInsetClassName } from '@/lib/space-theme';
 import { cn } from '@/lib/utils';
@@ -33,29 +33,18 @@ function ProjectImage({ title, image, imageAlt }: Pick<Project, 'title' | 'image
     );
 }
 
-export function ProjectCard({ title, description, image, imageAlt, tags, href }: Project) {
-    const content = (
-        <div
-            className={cn(
-                panelInsetClassName,
-                'flex flex-col md:flex-row gap-4 md:gap-6 p-4',
-                href && 'hover:border-purple-400/40 group',
-            )}
-        >
+const projectLinkClassName =
+    'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-white/12 bg-[#060d14]/50 hover:border-purple-400/40 text-zinc-300 hover:text-purple-300 text-[11px] font-mono-digital uppercase tracking-wider transition-colors';
+
+export function ProjectCard({ title, description, image, imageAlt, tags, siteHref, githubHref }: Project) {
+    const hasLinks = Boolean(siteHref || githubHref);
+
+    return (
+        <div className={cn(panelInsetClassName, 'flex flex-col md:flex-row gap-4 md:gap-6 p-4')}>
             <ProjectImage title={title} image={image} imageAlt={imageAlt} />
 
             <div className="flex flex-col flex-1 min-w-0">
-                <div className="flex items-start justify-between gap-3">
-                    <h3 className="font-orbitron text-sm md:text-base tracking-wide text-white">
-                        {title}
-                    </h3>
-                    {href && (
-                        <span className="shrink-0 flex items-center gap-1 font-mono-digital text-[10px] uppercase tracking-widest text-purple-400/70 group-hover:text-purple-300 transition-colors">
-                            Visit
-                            <ExternalLink className="w-3 h-3" />
-                        </span>
-                    )}
-                </div>
+                <h3 className="font-orbitron text-sm md:text-base tracking-wide text-white">{title}</h3>
 
                 <p className="text-zinc-400 text-sm mt-2 leading-relaxed">{description}</p>
 
@@ -71,17 +60,34 @@ export function ProjectCard({ title, description, image, imageAlt, tags, href }:
                         ))}
                     </div>
                 )}
+
+                {hasLinks && (
+                    <div className="flex flex-wrap gap-2 mt-auto pt-4">
+                        {siteHref && (
+                            <Link
+                                href={siteHref}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={projectLinkClassName}
+                            >
+                                <ExternalLink className="w-3.5 h-3.5 text-blue-400/70" />
+                                View Site
+                            </Link>
+                        )}
+                        {githubHref && (
+                            <Link
+                                href={githubHref}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={projectLinkClassName}
+                            >
+                                <Github className="w-3.5 h-3.5 text-blue-400/70" />
+                                View Repo
+                            </Link>
+                        )}
+                    </div>
+                )}
             </div>
         </div>
     );
-
-    if (href) {
-        return (
-            <Link href={href} target="_blank" rel="noopener noreferrer" className="block">
-                {content}
-            </Link>
-        );
-    }
-
-    return content;
 }
