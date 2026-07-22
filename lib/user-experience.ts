@@ -79,8 +79,9 @@ export const userExperience = {
                 items: [
                     { name: 'AWS', icon: '/icons/languages/AWS.svg', textColor: 'text-orange-400' },
                     { name: 'Google Cloud', icon: '/icons/languages/GoogleCloud.svg', textColor: 'text-blue-400' },
+                    { name: 'Vercel', icon: '/icons/languages/Vercel.svg', textColor: 'text-gray-300' },
                     { name: 'Git', icon: '/icons/languages/Git.svg', textColor: 'text-orange-500' },
-                    { name: 'Bitbucket', icon: '/icons/languages/Bitbucket.svg', textColor: 'text-blue-500' },
+                    { name: 'Bitbucket', icon: '/icons/languages/BitBucket.svg', textColor: 'text-blue-500' },
                 ],
             }
         ] satisfies TechSection[],

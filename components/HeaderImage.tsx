@@ -53,11 +53,6 @@ type MidoriComposer = {
     renderTarget2?: { texture: MidoriTexture };
 };
 
-/**
- * Midori's EffectComposer predates three.js color management. Forcing the
- * modern sRGB path double-encodes the image and leaves a washed look.
- * Keep textures + output in the legacy "pass bytes through" pipeline instead.
- */
 function configureLegacyColorPipeline(
     gl: MidoriGlRenderer,
     composer?: MidoriComposer,
@@ -95,35 +90,59 @@ export const HeaderImage = () => {
         let dispose: (() => void) | undefined;
 
         void (async () => {
-            const { BackgroundRenderer, Easings, TransitionType, loadImage } =
-                await import('midori-bg');
-
-            if (cancelled) return;
-
-            const { width, height } = canvas.getBoundingClientRect();
-            if (width < 2 || height < 2) {
-                setUseCssFallback(true);
-                setIsLoading(false);
-                return;
-            }
-
-            const renderer = new BackgroundRenderer(canvas);
-            dispose = () => renderer.dispose();
-
-            const midori = renderer as unknown as {
-                _renderer: MidoriGlRenderer;
-                _composer: MidoriComposer;
-            };
-            const gl = midori._renderer;
-            gl.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-            gl.setSize(canvas.clientWidth, canvas.clientHeight, false);
-            configureLegacyColorPipeline(gl, midori._composer);
-
-            // Strip any Midori post-FX (bloom / rgb-shift / glitch pass residue).
-            renderer.effects.removeAll();
-
             try {
-                // Load both first while the section stays solid-colored — no image flash.
+                const { BackgroundRenderer, Easings, TransitionType, loadImage } =
+                    await import('midori-bg');
+
+                if (cancelled) return;
+
+                const { width, height } = canvas.getBoundingClientRect();
+                if (width < 2 || height < 2) {
+                    setUseCssFallback(true);
+                    setIsLoading(false);
+                    return;
+                }
+
+                const renderer = new BackgroundRenderer(canvas);
+                dispose = () => renderer.dispose();
+
+                const midori = renderer as unknown as {
+                    _renderer: MidoriGlRenderer;
+                    _composer: MidoriComposer;
+                    setSize?: (width: number, height: number) => void;
+                };
+                const gl = midori._renderer;
+
+                const applyViewportSize = () => {
+                    const w = canvas.clientWidth;
+                    const h = canvas.clientHeight;
+                    if (w < 2 || h < 2) return;
+                    gl.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+                    if (typeof midori.setSize === 'function') {
+                        midori.setSize(w, h);
+                    } else {
+                        gl.setSize(w, h, false);
+                    }
+                    configureLegacyColorPipeline(gl, midori._composer);
+                };
+
+                applyViewportSize();
+
+                let resizeRaf = 0;
+                const handleResize = () => {
+                    if (resizeRaf) cancelAnimationFrame(resizeRaf);
+                    resizeRaf = requestAnimationFrame(applyViewportSize);
+                };
+                window.addEventListener('resize', handleResize);
+
+                dispose = () => {
+                    if (resizeRaf) cancelAnimationFrame(resizeRaf);
+                    window.removeEventListener('resize', handleResize);
+                    renderer.dispose();
+                };
+
+                renderer.effects.removeAll();
+
                 const [placeholder, image] = await Promise.all([
                     loadImage(createSolidDataUrl(FALLBACK_COLOR)),
                     loadImage(HEADER_IMAGE),
@@ -137,6 +156,8 @@ export const HeaderImage = () => {
                 renderer.setBackground(placeholder);
                 renderer.background.effects.removeAll();
 
+                setIsLoading(false);
+
                 renderer.setBackground(image, {
                     type: TransitionType.Glitch,
                     config: {
@@ -144,7 +165,6 @@ export const HeaderImage = () => {
                         duration: 1.4,
                         easing: Easings.Cubic.Out,
                         onStart: (_prev, next) => {
-                            setIsLoading(false);
                             next?.effects.removeAll();
                         },
                         onComplete: (_prev, next) => {
@@ -166,6 +186,8 @@ export const HeaderImage = () => {
                 });
             } catch (err) {
                 console.error('Failed to load header background', err);
+                dispose?.();
+                dispose = undefined;
                 setUseCssFallback(true);
                 setIsLoading(false);
             }
@@ -188,7 +210,9 @@ export const HeaderImage = () => {
         >
             <canvas
                 ref={canvasRef}
-                className="absolute inset-0 z-0 h-full w-full"
+                className={`absolute inset-0 z-0 h-full w-full ${
+                    useCssFallback ? 'hidden' : ''
+                }`}
                 aria-hidden
             />
             {isLoading && (

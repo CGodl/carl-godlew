@@ -3,8 +3,32 @@
 import Image from 'next/image';
 import { SpacePanel } from '@/components/SpacePanel';
 import { SectionTitle } from '@/components/SectionTitle';
-import { userExperience } from '@/lib/user-experience';
+import { userExperience, type TechItem } from '@/lib/user-experience';
 import { cn } from '@/lib/utils';
+
+/** Mobile: inline badges. Desktop (md+): icon + text grid. */
+function TechItems({ items }: { items: TechItem[] }) {
+    return (
+        <>
+            <div className="flex flex-wrap gap-2 md:hidden">
+                {items.map((item) => (
+                    <span key={item.name} className="inline-flex items-center gap-2 px-2.5 py-1 text-md text-zinc-200 rounded border border-white/12 bg-[#060d14]/50 hover:border-purple-400/35 hover:scale-110 transition-all duration-200">
+                        <Image src={item.icon} alt={item.name} width={16} height={16} className="shrink-0" />
+                        {item.name}
+                    </span>
+                ))}
+            </div>
+            <div className="hidden md:flex flex-wrap gap-6">
+                {items.map((item) => (
+                    <div key={item.name} className="flex flex-col items-center gap-2 text-base text-zinc-200 hover:scale-110 transition-transform duration-200 cursor-default">
+                        <Image src={item.icon} alt={item.name} width={48} height={48} />
+                        <span>{item.name}</span>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
+}
 
 const techLanguages = [
     'HTML',
@@ -43,55 +67,20 @@ export function Skills() {
                     <SectionTitle subtitle={userExperience.technologies.languages.subtitle}>
                         {userExperience.technologies.languages.title}
                     </SectionTitle>
-                    <div className="flex flex-wrap gap-2">
-                        {userExperience.technologies.languages.items.map((language) => (
-                            <span key={language.name} className="inline-flex items-center gap-2 px-2.5 py-1 text-md text-zinc-200 rounded border border-white/12 bg-[#060d14]/50 hover:border-purple-400/35 hover:scale-110 transition-all duration-200">
-                                <Image src={language.icon} alt={language.name} width={16} height={16} className="shrink-0" />
-                                {language.name}
-                            </span>
-                        ))}
-                    </div>
-                </SpacePanel>
-
-                <SpacePanel className="md:col-span-3">
-                    <SectionTitle subtitle={userExperience.technologies.languages.subtitle}>
-                        {userExperience.technologies.languages.title}
-                    </SectionTitle>
-                    <div className="flex flex-wrap gap-6">
-                        {userExperience.technologies.languages.items.map((language) => (
-                            <div key={language.name} className="flex flex-col items-center gap-2 text-base text-zinc-200 hover:scale-110 transition-transform duration-200 cursor-default">
-                                <Image src={language.icon} alt={language.name} width={48} height={48} />
-                                <span>{language.name}</span>
-                            </div>
-                        ))}
-                    </div>
+                    <TechItems items={userExperience.technologies.languages.items} />
                 </SpacePanel>
 
                 <SpacePanel className="md:col-span-3">
                     <SectionTitle subtitle={userExperience.technologies.frontend.subtitle}>
                         {userExperience.technologies.frontend.title}
                     </SectionTitle>
-                    <div className="flex flex-wrap gap-6">
-                        {userExperience.technologies.frontend.items.map((language) => (
-                            <div key={language.name} className="flex flex-col items-center gap-2 text-base text-zinc-200 hover:scale-110 transition-transform duration-200 cursor-default">
-                                <Image src={language.icon} alt={language.name} width={48} height={48} />
-                                <span>{language.name}</span>
-                            </div>
-                        ))}
-                    </div>
+                    <TechItems items={userExperience.technologies.frontend.items} />
                 </SpacePanel>
 
                 {userExperience.technologies.sections.map((section) => (
                     <SpacePanel key={section.id} className="md:col-span-3">
                         <SectionTitle subtitle={section.subtitle}>{section.title}</SectionTitle>
-                        <div className="flex flex-wrap gap-6">
-                            {section.items.map((item) => (
-                                <div key={item.name} className="flex flex-col items-center gap-2 text-base text-zinc-200 hover:scale-110 transition-transform duration-200 cursor-default">
-                                    <Image src={item.icon} alt={item.name} width={48} height={48} />
-                                    <span>{item.name}</span>
-                                </div>
-                            ))}
-                        </div>
+                        <TechItems items={section.items} />
                     </SpacePanel>
                 ))}
 

@@ -19,12 +19,12 @@ export function FeaturedProjects() {
                             <ProjectCard key={project.title} {...project} />
                         ))}
                     </div>
-                    <Link
+                    {/* <Link
                         href="/projects"
                         className={cn(buttonGhostClassName, 'block w-full py-2.5 mt-5 text-center text-purple-300/90')}
                     >
                         View All Projects →
-                    </Link>
+                    </Link> */}
                 </SpacePanel>
             </div>
         </section>

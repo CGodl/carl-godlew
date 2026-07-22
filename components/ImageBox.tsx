@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { X } from 'lucide-react';
 import { SpacePanel } from '@/components/SpacePanel';
@@ -14,6 +14,24 @@ export function ImageBox({
     className,
 }: TravelPhoto & { className?: string }) {
     const [open, setOpen] = useState(false);
+
+    // Close on Escape and lock background scroll while the lightbox is open.
+    useEffect(() => {
+        if (!open) return;
+
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setOpen(false);
+        };
+        document.addEventListener('keydown', onKeyDown);
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.removeEventListener('keydown', onKeyDown);
+            document.body.style.overflow = previousOverflow;
+        };
+    }, [open]);
 
     return (
         <>
@@ -39,7 +57,6 @@ export function ImageBox({
                 <div
                     className="fixed inset-0 z-50 flex items-center justify-center bg-[#060d12]/90 p-4"
                     onClick={() => setOpen(false)}
-                    onKeyDown={(e) => e.key === 'Escape' && setOpen(false)}
                     role="dialog"
                     aria-modal="true"
                     aria-label={alt}
