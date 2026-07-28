@@ -141,7 +141,7 @@ export const siteContent = {
     },
 
     resume: {
-        pdfPath: '/resume.pdf',
+        pdfPath: '/Carl_Godlewski_Resume.pdf',
         summary: 'Software Engineer',
         header: {
             name: 'Carl Godlewski',
