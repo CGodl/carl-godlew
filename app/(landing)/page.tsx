@@ -15,7 +15,7 @@ const personJsonLd = {
     '@type': 'Person',
     name: 'Carl Godlewski',
     url: 'https://carlgodlewski.com',
-    image: 'https://carlgodlewski.com/self/profilePhoto.jpeg',
+    image: 'https://carlgodlewski.com/self/profilePhoto.webp',
     jobTitle: 'Web Developer',
     address: {
         '@type': 'PostalAddress',
