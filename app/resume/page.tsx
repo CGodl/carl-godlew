@@ -1,5 +1,13 @@
+import type { Metadata } from 'next';
 import { SiteShell } from '@/components/SiteShell';
 import { SectionTitle } from '@/components/SectionTitle';
+
+export const metadata: Metadata = {
+    title: 'Resume',
+    description:
+        'Resume of Carl Godlewski — full-stack engineer with 5+ years of experience across React, Next.js, TypeScript, Python, and AWS at startups and Fortune 500 companies.',
+    alternates: { canonical: '/resume' },
+};
 import { ResumeDocument } from '@/components/ResumeDocument';
 import { buttonPrimaryClassName } from '@/lib/space-theme';
 import { siteContent } from '@/lib/site-content';

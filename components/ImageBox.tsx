@@ -12,7 +12,8 @@ export function ImageBox({
     alt,
     caption,
     className,
-}: TravelPhoto & { className?: string }) {
+    fit = 'cover',
+}: TravelPhoto & { className?: string; fit?: 'cover' | 'contain' }) {
     const [open, setOpen] = useState(false);
 
     // Close on Escape and lock background scroll while the lightbox is open.
@@ -39,7 +40,7 @@ export function ImageBox({
                 type="button"
                 onClick={() => setOpen(true)}
                 className={cn(
-                    'relative w-full h-full min-h-[120px] overflow-hidden group cursor-pointer',
+                    'relative w-full h-full min-h-30 overflow-hidden group cursor-pointer',
                     className,
                 )}
             >
@@ -47,7 +48,10 @@ export function ImageBox({
                     src={src}
                     alt={alt}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={cn(
+                        'transition-transform duration-500 group-hover:scale-105',
+                        fit === 'contain' ? 'object-contain' : 'object-cover',
+                    )}
                     sizes="(max-width: 768px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-blue-950/0 group-hover:bg-blue-950/20 transition-colors" />

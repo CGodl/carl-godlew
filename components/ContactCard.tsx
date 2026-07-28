@@ -26,7 +26,7 @@ function SocialIcon({ social }: { social: SocialLink }) {
 }
 
 export function ContactCard() {
-    const { email, location, timezone, socials } = siteContent.contact;
+    const { location, timezone, socials } = siteContent.contact;
 
     return (
         <SpacePanel className={`w-full max-w-lg`}>
@@ -39,12 +39,9 @@ export function ContactCard() {
                     </p>
                 </div>
 
-                {/* <a
-                    href={`mailto:${email}`}
-                    className="block font-mono-digital text-sm text-zinc-400 hover:text-purple-300 transition-colors tracking-wide"
-                >
-                    {email}
-                </a> */}
+                <p className="text-zinc-400 text-sm leading-relaxed max-w-sm mx-auto">
+                    Feel free to reach out to me via email or LinkedIn. However, I prefer communicating via LinkedIn for professional inquiries.
+                </p>
 
                 <p className="font-mono-digital text-[11px] text-zinc-500 uppercase tracking-widest">
                     {location} · {timezone}

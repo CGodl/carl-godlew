@@ -49,6 +49,12 @@ body {
   background-color: var(--space-bg);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -73,4 +79,17 @@ body {
 
 .animate-pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes scanline {
+  0% {
+    top: -20%;
+  }
+  100% {
+    top: 120%;
+  }
+}
+
+.animate-scanline {
+  animation: scanline 4s linear infinite;
 }

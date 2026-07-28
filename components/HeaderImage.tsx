@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import StarParticles from '@/components/StarParticles';
 
 const HEADER_IMAGE = '/projects/spaceHeader.webp';
@@ -249,24 +250,36 @@ export const HeaderImage = () => {
                         // <span className="inline-block overflow-hidden whitespace-nowrap align-bottom animate-typewriter">Signal acquired</span>
                     </p>
                     <h1 className="font-knewave md:text-7xl text-4xl text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
-                        Creating Web
-                    </h1>
-                    <h1 className="font-knewave md:text-7xl text-4xl text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
-                        Experiences
-                    </h1>
-                    <h1 className="font-knewave md:text-7xl text-4xl leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
-                        <span className="pr-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                            For The Next
+                        <span className="block">Creating Web</span>
+                        <span className="block">Experiences</span>
+                        <span className="block">
+                            <span className="pr-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                                For The Next
+                            </span>
                         </span>
-                    </h1>
-                    <h1 className="font-knewave md:text-7xl text-4xl text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
-                        Frontier!
+                        <span className="block">Frontier!</span>
                     </h1>
                     <p className="font-orbitron text-sm md:text-md tracking-[0.25em] uppercase text-white mt-6">
                         Carl Godlewski · Web Developer
                     </p>
                 </div>
             </div>
+            <a
+                href="#aboutMe"
+                aria-label="Continue to the about me section"
+                className={`group absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 rounded-md px-3 py-1 transition-opacity duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400/80 ${
+                    isLoading ? 'opacity-0 pointer-events-none' : 'opacity-100'
+                }`}
+            >
+                <span className="font-orbitron text-xl md:text-2xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] transition-colors group-hover:text-purple-300">
+                    CONTINUE TRANSMISSION...
+                </span>
+                <ChevronDown
+                    aria-hidden
+                    className="w-6 h-6 text-white/80 animate-bounce transition-colors group-hover:text-purple-300"
+                />
+                
+            </a>
         </section>
     );
 };

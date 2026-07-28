@@ -8,7 +8,7 @@ const AboutMe = () => {
 			<div className='grid grid-cols-5 grid-rows-5 gap-2'>
 				<Card className='rounded-lg col-span-4 row-span-4'>
 					<CardImage
-						src='/spainForgot.jpg'
+						src='/travel/MumbaiBrittania.jpg'
 						alt='Picture of Carl Godlewski'
 						style={{ height: '100%', width: '100%' }}
 					/>

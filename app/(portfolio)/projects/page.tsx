@@ -1,7 +1,15 @@
+import type { Metadata } from 'next';
 import { SpacePanel } from '@/components/SpacePanel';
 import { SectionTitle } from '@/components/SectionTitle';
 import { ProjectCard } from '@/components/ProjectCard';
 import { siteContent } from '@/lib/site-content';
+
+export const metadata: Metadata = {
+    title: 'Projects',
+    description:
+        'Featured projects by Carl Godlewski — web applications built with React, Next.js, TypeScript, and more.',
+    alternates: { canonical: '/projects' },
+};
 
 export default function ProjectsPage() {
     return (

@@ -26,7 +26,12 @@ const services = [
 
 export function BioBento({ className }: { className?: string }) {
     return (
-        <section className={cn('px-4 md:px-6 lg:px-8', className)}>
+        <section
+            id="aboutMe"
+            tabIndex={-1}
+            aria-label="About me"
+            className={cn('px-4 md:px-6 lg:px-8 scroll-mt-6 outline-none', className)}
+        >
             <div className="mx-auto max-w-6xl">
                 <SectionTitle subtitle="Overview">Dashboard</SectionTitle>
 

@@ -13,7 +13,7 @@ export function BioProfile() {
                 <SpacePanel className="p-3 flex items-center justify-center">
                     <div className="relative aspect-[3/4] w-full max-w-[240px] rounded-md overflow-hidden ring-1 ring-purple-500/20">
                         <Image
-                            src={siteContent.bio.profilePhoto}
+                            src={siteContent.bio.profilePhotoTwo}
                             alt={siteContent.name}
                             fill
                             className="object-cover"

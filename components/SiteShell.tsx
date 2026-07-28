@@ -25,7 +25,7 @@ export function SiteShell({
                 className="absolute inset-0 z-0 pointer-events-none"
             />}
             <NavBarGlass />
-            <main className="relative z-10">{children}</main>
+            <main className="relative z-10 outline-none" id="main-content" tabIndex={-1}>{children}</main>
         </div>
     );
 }
