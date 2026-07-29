@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Knewave, Goldman, Orbitron, Share_Tech_Mono } from 'next/font/google';
 import { SkipToContent } from '@/components/SkipToContent';
+import FullStory from '@/components/Fullstory';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter'});
 const knewave = Knewave({ subsets: ['latin'], weight: '400', variable: '--font-knewave' });
@@ -65,6 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${knewave.variable} ${goldman.variable} ${orbitron.variable} ${shareTechMono.variable} font-inter antialiased`}>
+        <FullStory />
         <SkipToContent />
         {children}
       </body>
