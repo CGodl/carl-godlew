@@ -33,7 +33,7 @@ export const siteContent = {
             "My passion is using my experiences and know-how to develop solutions to challenges in the tech sphere.",
         extended: `Coming from my previous career as a Swaps Compliance Examiner my non-technical experience includes leadership, management, interviewing subject matter experts, and working in a team setting to complete projects. Some of my previous work includes projects that encompass my interests in budget management, travel, and organizing projects. I am currently interested in learning more about blockchain development and working through courses to realize this goal.`,
         profilePhoto: '/self/profilePhoto.webp',
-        profilePhotoTwo: '/self/spainSelfie.webp',
+        profilePhotoTwo: '/self/selfInSpain.webp',
         location: 'New York City, USA',
         timezone: 'UTC-5',
     },
