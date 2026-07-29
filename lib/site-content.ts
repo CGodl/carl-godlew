@@ -41,7 +41,7 @@ export const siteContent = {
     projects: [
         {
             title: 'Portfolio Website (This Website)',
-            description: "Yes! The website you're viewing right now! I experimented on and off with creating a updated version of my original portfolio that used Next.js, TailWind, and TypeScript to create a website more in line with my interests and technologies. Originally designed in Figma, I then built out a skeleton leveraging Cursor and implemented the finalized design.",
+            description: " Yes, the website you’re currently viewing! I experimented with redesigning my original portfolio before ultimately replacing it with this space-themed version. The design was inspired by GalaxyEye, one of my earliest projects, as well as my broader interest in the theme of exploration. I began by using Figma to map out the website’s structure and create a style guide for its typography and components. I also used the project as an opportunity to experiment with LLM tools, including Fable 5, and better understand how they could support the design and implementation process. By combining these tools with my own development experience, I was able to create a portfolio that matched my original vision while significantly reducing implementation time. ",
             image: '/projects/spaceHeader.webp',
             imageAlt: 'Portfolio homepage',
             tags: ['Next.js', 'Tailwind', 'TypeScript'],
