@@ -1,13 +1,27 @@
+import type { Metadata } from 'next';
+import { SpacePanel } from '@/components/SpacePanel';
+import { SectionTitle } from '@/components/SectionTitle';
+import { ProjectCard } from '@/components/ProjectCard';
+import { siteContent } from '@/lib/site-content';
 
-import React from 'react';
-
-const ProjectsPage = () => {
-
-	return (
-		<div>
-			test
-		</div>
-	);
+export const metadata: Metadata = {
+    title: 'Projects',
+    description:
+        'Featured projects by Carl Godlewski — web applications built with React, Next.js, TypeScript, and more.',
+    alternates: { canonical: '/projects' },
 };
 
-export default ProjectsPage;
+export default function ProjectsPage() {
+    return (
+        <div className="px-4 md:px-6 lg:px-8 py-10 md:py-14 max-w-6xl mx-auto">
+            <SpacePanel>
+                <SectionTitle subtitle="Work I&apos;ve built and contributed to">Projects</SectionTitle>
+                <div className="flex flex-col gap-4">
+                    {siteContent.projects.map((project) => (
+                        <ProjectCard key={project.title} {...project} />
+                    ))}
+                </div>
+            </SpacePanel>
+        </div>
+    );
+}

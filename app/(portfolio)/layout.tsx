@@ -1,20 +1,7 @@
-import { NavBarGlass } from '@/components/Navigation/Glass';
-import { NavBar } from '@/components/Navigation/Navigation';
-import Particles from '@/components/particles';
+import { SiteShell } from '@/components/SiteShell';
 
 const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
-	return (
-		<>
-			<NavBarGlass />
-			<Particles
-				className='absolute inset-0 -z-10 animate-fade-in'
-				quantity={100}
-			/>
-			<main>
-				<div>{children}</div>
-			</main>
-		</>
-	);
+    return <SiteShell>{children}</SiteShell>;
 };
 
 export default PortfolioLayout;

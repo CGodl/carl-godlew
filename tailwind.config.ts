@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config = {
-	darkMode: ['class'],
+	darkMode: 'class',
 	content: [
 		'./pages/**/*.{ts,tsx}',
 		'./components/**/*.{ts,tsx}',
@@ -31,10 +31,15 @@ const config = {
 					from: { height: 'var(--radix-accordion-content-height)' },
 					to: { height: '0' },
 				},
+				typewriter: {
+					from: { width: '0' },
+					to: { width: 'calc(15ch + 4.5em)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
+				typewriter: 'typewriter 2s steps(15) forwards',
 			},
 			fontFamily: {
 				sans: ['var(--font-inter)', 'sans-serif'],

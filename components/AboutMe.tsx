@@ -8,7 +8,7 @@ const AboutMe = () => {
 			<div className='grid grid-cols-5 grid-rows-5 gap-2'>
 				<Card className='rounded-lg col-span-4 row-span-4'>
 					<CardImage
-						src='/spainForgot.jpg'
+						src='/travel/india/MumbaiBrittania.webp'
 						alt='Picture of Carl Godlewski'
 						style={{ height: '100%', width: '100%' }}
 					/>
@@ -89,8 +89,7 @@ const AboutMe = () => {
 				<BentoGrid />
 				<div>
 					<h4>
-						Software Engineer with experience in Ruby on Rails, Javascript,
-						React, Rails, Redux, SQL, and MERN development. My passion is using
+						Full-Stack Software Engineer with extensive experience working in NextJs, React, TypeScript, Python, and SQL. My passion is using
 						my experiences and know-how to develop solutions to challenges in
 						the tech sphere.
 					</h4>
