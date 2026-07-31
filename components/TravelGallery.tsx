@@ -133,13 +133,12 @@ export function TravelGallery({ photos }: { photos: TravelPhoto[] }) {
     const next = () => setPage((p) => (p + 1) % countries.length);
 
     return (
-        <SpacePanel>
+        <SpacePanel className="mb-10 md:mb-0">
             <SectionTitle subtitle="Some of my favorite photos from my travels around the world">
                 Travel
             </SectionTitle>
 
-            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-3">
-                {/* Left column — hero with country overlay + optional two-up rows */}
+            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-3 pb-20 md:pb-10">
                 <div className="flex flex-col gap-3">
                     <PhotoTile
                         photos={photos}
@@ -155,8 +154,7 @@ export function TravelGallery({ photos }: { photos: TravelPhoto[] }) {
                     )}
                 </div>
 
-                {/* Right column — field note + photo tiles */}
-                <div className="flex flex-col gap-3">
+\                <div className="flex flex-col gap-3">
                     <div className="flex flex-col justify-center border-l border-purple-400/30 pl-4 py-2 flex-1">
                         <p className="font-mono-digital text-[10px] uppercase tracking-[0.25em] text-purple-400/80">
                             Field Notes · {String(page + 1).padStart(2, '0')}/
