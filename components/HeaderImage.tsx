@@ -246,7 +246,7 @@ export const HeaderImage = () => {
                 }`}
             >
                 <div>
-                    <p className="font-mono-digital text-sm md:text-[22px] uppercase tracking-[0.3em] text-white mb-2 md:mb-4 animate-pulse-glow drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+                    <p className="font-mono-digital text-xs md:text-[22px] uppercase tracking-[0.3em] text-white mb-2 md:mb-4 animate-pulse-glow drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
                         // <span className="inline-block overflow-hidden whitespace-nowrap align-bottom animate-typewriter">Signal acquired</span>
                     </p>
                     <h1 className="font-knewave md:text-7xl text-4xl text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
