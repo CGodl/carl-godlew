@@ -8,6 +8,9 @@ const nextConfig = {
   // midori-bg still imports three/examples/jsm/WebGL and expects the old
   // `{ WEBGL: { isWebGLAvailable } }` export shape.
   turbopack: {
+    // Without this, a stray lockfile in the home dir makes Turbopack root itself
+    // there and file watching for this project stops working.
+    root: __dirname,
     resolveAlias: {
       'three/examples/jsm/WebGL': './lib/three-webgl-compat.js',
       'three/examples/jsm/WebGL.js': './lib/three-webgl-compat.js',

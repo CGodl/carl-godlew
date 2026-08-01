@@ -246,7 +246,7 @@ export const HeaderImage = () => {
                 }`}
             >
                 <div>
-                    <p className="font-mono-digital text-[22px] uppercase tracking-[0.3em] text-white mb-4 animate-pulse-glow drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+                    <p className="font-mono-digital text-xs md:text-[22px] uppercase tracking-[0.3em] text-white mb-2 md:mb-4 animate-pulse-glow drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
                         // <span className="inline-block overflow-hidden whitespace-nowrap align-bottom animate-typewriter">Signal acquired</span>
                     </p>
                     <h1 className="font-knewave md:text-7xl text-4xl text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
@@ -267,11 +267,11 @@ export const HeaderImage = () => {
             <a
                 href="#aboutMe"
                 aria-label="Continue to the about me section"
-                className={`group absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 rounded-md px-3 py-1 transition-opacity duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400/80 ${
+                className={`group absolute bottom-8 left-1/2 -translate-x-1/2 z-20 inline-flex flex-col items-center gap-1 w-max rounded-md px-3 py-1 transition-opacity duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400/80 ${
                     isLoading ? 'opacity-0 pointer-events-none' : 'opacity-100'
                 }`}
             >
-                <span className="font-orbitron text-xl md:text-2xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] transition-colors group-hover:text-purple-300">
+                <span className="font-orbitron whitespace-nowrap text-center text-sm md:text-2xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] transition-colors group-hover:text-purple-300">
                     CONTINUE TRANSMISSION...
                 </span>
                 <ChevronDown

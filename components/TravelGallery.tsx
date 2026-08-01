@@ -1,15 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { SpacePanel } from '@/components/SpacePanel';
 import { SectionTitle } from '@/components/SectionTitle';
 import { ImageBox } from '@/components/ImageBox';
 import { cn } from '@/lib/utils';
 import type { TravelPhoto } from '@/lib/site-content';
-
-const navButtonClassName =
-    'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border border-blue-400/25 bg-blue-950/20 hover:bg-purple-950/30 hover:border-purple-400/50 text-zinc-300 hover:text-purple-200 text-[10px] leading-none font-mono-digital uppercase tracking-[0.15em] transition-colors cursor-pointer';
 
 type Tile = {
     srcPart: string;
@@ -36,7 +33,7 @@ const countries: Country[] = [
         hero: { srcPart: 'KyotoGoldenPav', aspectClass: 'aspect-4/3' },
         sideTiles: [
             { srcPart: 'OsakaRunningMan', aspectClass: 'aspect-3/4', chip: 'Osaka · Dotonbori' },
-            { srcPart: 'KyotoToriGates', aspectClass: 'aspect-3/4', chip: 'Kyoto · Tori Gates' }
+            { srcPart: 'KyotoToriGates', aspectClass: 'aspect-3/4', chip: 'Kyoto · Tori Gates' },
         ],
         bottomTiles: [
             { srcPart: 'TokyoMuseum', aspectClass: 'aspect-square', chip: 'Tokyo · teamLab Borderless' },
@@ -53,7 +50,6 @@ const countries: Country[] = [
         sideTiles: [
             { srcPart: 'MumbaiParsiBakery', aspectClass: 'aspect-3/4', chip: 'Mumbai · Parsi bakery' },
             { srcPart: 'DelhiJamaMasjid', aspectClass: 'aspect-3/4', chip: 'New Delhi · Jama Masjid' },
-
         ],
         bottomTiles: [
             { srcPart: 'MumbaiSleepingCat', aspectClass: 'aspect-square', chip: 'Mumbai · Sleeping cat' },
@@ -75,7 +71,7 @@ const countries: Country[] = [
             { srcPart: 'SingaporeTempleBuddha', aspectClass: 'aspect-square', chip: 'Buddha Tooth Relic Temple' },
             { srcPart: 'SingaporeColorfulBuildings', aspectClass: 'aspect-square', chip: 'Colorful Buildings' },
             { srcPart: 'SingaporeSeaLion', aspectClass: 'aspect-square', chip: 'Sea Lion' },
-            { srcPart: 'SingaporeRedBuilding', aspectClass: 'aspect-square', chip: 'People\'s Park Complex' },
+            { srcPart: 'SingaporeRedBuilding', aspectClass: 'aspect-square', chip: "People's Park Complex" },
         ],
     },
 ];
@@ -125,21 +121,40 @@ function PhotoTile({
     );
 }
 
+const tabTriggerClassName = cn(
+    'font-mono-digital text-[10px] uppercase tracking-[0.15em]',
+    'rounded-none border-0 bg-transparent shadow-none',
+    'text-zinc-500 hover:text-zinc-300',
+    'data-[state=active]:bg-transparent data-[state=active]:text-purple-200 data-[state=active]:shadow-none',
+    'after:bg-blue-400/25 data-[state=active]:after:bg-purple-400/50',
+    'dark:data-[state=active]:bg-transparent dark:data-[state=active]:text-purple-200',
+);
+
 export function TravelGallery({ photos }: { photos: TravelPhoto[] }) {
     const [page, setPage] = useState(0);
     const country = countries[page];
 
-    const prev = () => setPage((p) => (p - 1 + countries.length) % countries.length);
-    const next = () => setPage((p) => (p + 1) % countries.length);
-
     return (
-        <SpacePanel>
+        <SpacePanel className="mb-10 md:mb-0">
             <SectionTitle subtitle="Some of my favorite photos from my travels around the world">
                 Travel
             </SectionTitle>
 
-            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-3">
-                {/* Left column — hero with country overlay + optional two-up rows */}
+            <Tabs
+                value={String(page)}
+                onValueChange={(value) => setPage(Number(value))}
+                className="mb-4"
+            >
+                <TabsList variant="line" className="gap-1.5">
+                    {countries.map((c, i) => (
+                        <TabsTrigger key={c.name} value={String(i)} className={tabTriggerClassName}>
+                            {c.name}
+                        </TabsTrigger>
+                    ))}
+                </TabsList>
+            </Tabs>
+
+            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-3 md:pb-10">
                 <div className="flex flex-col gap-3">
                     <PhotoTile
                         photos={photos}
@@ -155,7 +170,6 @@ export function TravelGallery({ photos }: { photos: TravelPhoto[] }) {
                     )}
                 </div>
 
-                {/* Right column — field note + photo tiles */}
                 <div className="flex flex-col gap-3">
                     <div className="flex flex-col justify-center border-l border-purple-400/30 pl-4 py-2 flex-1">
                         <p className="font-mono-digital text-[10px] uppercase tracking-[0.25em] text-purple-400/80">
@@ -170,35 +184,6 @@ export function TravelGallery({ photos }: { photos: TravelPhoto[] }) {
                         <PhotoTile key={tile.srcPart} photos={photos} tile={tile} />
                     ))}
                 </div>
-            </div>
-
-            <div className="flex items-center justify-between gap-3 mt-4">
-                <button type="button" onClick={prev} aria-label="Previous country" className={navButtonClassName}>
-                    <ChevronLeft className="w-3 h-3 shrink-0 text-blue-400/80" />
-                    Prev
-                </button>
-                <div className="flex flex-wrap items-center justify-center gap-1.5">
-                    {countries.map((c, i) => (
-                        <button
-                            key={c.name}
-                            type="button"
-                            onClick={() => setPage(i)}
-                            aria-pressed={page === i}
-                            className={cn(
-                                'px-2 py-1 rounded-sm font-mono-digital text-[10px] uppercase tracking-[0.15em] transition-colors cursor-pointer',
-                                page === i
-                                    ? 'text-purple-200 border border-purple-400/50 bg-purple-950/30'
-                                    : 'text-zinc-500 border border-transparent hover:text-zinc-300',
-                            )}
-                        >
-                            {c.name}
-                        </button>
-                    ))}
-                </div>
-                <button type="button" onClick={next} aria-label="Next country" className={navButtonClassName}>
-                    Next
-                    <ChevronRight className="w-3 h-3 shrink-0 text-blue-400/80" />
-                </button>
             </div>
         </SpacePanel>
     );

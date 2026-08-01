@@ -34,7 +34,7 @@ export default function HomePage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
             />
-            <div className="relative flex flex-col items-center justify-center w-full h-screen overflow-hidden">
+            <div >
                 <HeaderImage />
                 <NavBarGlass />
             </div>

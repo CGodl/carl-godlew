@@ -99,7 +99,7 @@ export function ResumeDocument() {
                 </div>
             </SpacePanel>
 
-            <SpacePanel>
+            <SpacePanel className="mb-10 md:mb-0">
                 <ResumeSectionHeading>Education</ResumeSectionHeading>
                 <div className="flex flex-col gap-3">
                     {resume.education.map((entry) => (
