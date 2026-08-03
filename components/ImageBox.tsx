@@ -41,6 +41,7 @@ export function ImageBox({
                 onClick={() => setOpen(true)}
                 className={cn(
                     'relative w-full h-full min-h-30 overflow-hidden group cursor-pointer',
+                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-purple-400/60',
                     className,
                 )}
             >
@@ -49,12 +50,12 @@ export function ImageBox({
                     alt={alt}
                     fill
                     className={cn(
-                        'transition-transform duration-500 group-hover:scale-105',
+                        'transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105',
                         fit === 'contain' ? 'object-contain' : 'object-cover',
                     )}
                     sizes="(max-width: 768px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-blue-950/0 group-hover:bg-blue-950/20 transition-colors" />
+                <div className="absolute inset-0 bg-blue-950/0 group-hover:bg-blue-950/20 group-focus-visible:bg-blue-950/20 transition-colors" />
             </button>
 
             {open && (

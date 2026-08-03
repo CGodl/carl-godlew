@@ -94,7 +94,7 @@ function PhotoTile({
     return (
         <div
             className={cn(
-                'relative rounded-md overflow-hidden ring-1 ring-white/12 hover:ring-purple-400/35 transition-all',
+                'relative rounded-md overflow-hidden ring-1 ring-white/12 hover:ring-purple-400/35 focus-within:ring-purple-400/50 transition-all',
                 tile.aspectClass,
             )}
         >

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Newspaper } from 'lucide-react';
 import type { Project } from '@/lib/site-content';
 import { SectionTitle } from '@/components/SectionTitle';
 import { siteContent } from '@/lib/site-content';
@@ -112,7 +112,6 @@ function MissionCard({ project, index }: { project: Project; index: number }) {
                 <p className="text-zinc-400 text-sm mt-2 leading-relaxed flex-1">
                     {project.description}
                 </p>
-
                 {project.tags && project.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-3">
                         {project.tags.map((tag) => {
@@ -131,7 +130,6 @@ function MissionCard({ project, index }: { project: Project; index: number }) {
                         })}
                     </div>
                 )}
-
                 <div className="flex flex-wrap gap-2 mt-4 pt-3 border-t border-blue-400/10">
                     {displayLinkStatus(project.siteHref)}
                     {project.githubHref && (
@@ -145,7 +143,32 @@ function MissionCard({ project, index }: { project: Project; index: number }) {
                             Source
                         </Link>
                     )}
+                     {project.addlLink && (
+                        <Link
+                            href={project.addlLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={consoleButtonClassName}
+                        >
+                            <Newspaper className="w-3 h-3 -mt-px shrink-0 text-blue-400/80" />
+                            {project.addlLinkText}
+                        </Link>
+                    )}
+                    {project.addlLink2 && (
+                        <Link
+                            href={project.addlLink2}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={consoleButtonClassName}
+                        >
+                            <Newspaper className="w-3 h-3 -mt-px shrink-0 text-blue-400/80" />
+                            {project.addlLink2Text}
+                        </Link>
+                    )}
                 </div>
+                
+              
+               
             </div>
         </article>
     );

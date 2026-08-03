@@ -6,6 +6,10 @@ export type Project = {
     tags?: string[];
     siteHref?: string;
     githubHref?: string;
+    addlLink?: string;
+    addlLinkText?: string;
+    addlLink2?: string;
+    addlLink2Text?: string;
 };
 
 export type TravelPhoto = {
@@ -56,29 +60,24 @@ export const siteContent = {
             imageAlt: 'Garbo homepage',
             tags: ['React', 'Sass', 'JavaScript'],
             siteHref: 'https://garbo.io',
+            addlLink: 'https://www.tinderpressroom.com/2022-03-09-Garbo-Launches-Background-Check-Platform-To-Public-and-On-Tinder',
+            addlLinkText: "Match Group Press Release",
+            addlLink2: 'https://www.theverge.com/2021/3/15/22327854/match-group-garbo-tinder-background-check-update',
+            addlLink2Text: 'TheVerge Article',
         },
         {
             title: 'GealAi',
             description:
-                'Experience the future with an AI-driven web app that seamlessly generates conversations, coding assistance, and music. Transform your ideas into reality with the ultimate multitasking marvel, redefining the way you engage with technology.',
+                'Experience the future with an AI-driven web app that seamlessly generates conversations, coding assistance, and music. Transform your ideas into reality with the ultimate multitasking marvel, redefining the way you engage with technology. This project was developed as part of a self-study initiative into learning more about AI and its capabilities. It leverages OpenAI\'s and Replicate\'s AI models to generate content. The application itself was built without LLM tools on Next.js, TypeScript, and Tailwind CSS.',
             image: '/projects/gealai.webp',
             imageAlt: 'GealAi homepage',
-            tags: ['Next.js', 'AI', 'TypeScript'],
+            tags: ['Next.js', 'TypeScript', 'Supabase'],
             githubHref: 'https://github.com/CGodl/GaelAi',
-        },
-        {
-            title: 'GalaxyEye',
-            description: 'Application to track data on upcoming rocket launches around the world.',
-            image: '/projects/galaxyeye.webp',
-            imageAlt: 'GalaxyEye homepage',
-            tags: ['HTML5', 'CSS', 'JavaScript'],
-            siteHref: 'https://cgodl.github.io/galaxyeye/',
-            githubHref: 'https://github.com/CGodl/galaxyeye',
         },
         {
             title: 'Mintrello',
             description:
-                'Designed as part of the Mintbean Hackathon challenge on 8/28/20. The goal was to create a working kanban board over the weekend. Final project was a noted runner-up in the competition.',
+                'Designed as part of the Mintbean Hackathon challenge on 8/28/20. The goal was to create a working kanban board over the weekend. I served as the Frontend Engineer on this project. Final project was a noted runner-up in the competition.',
             image: '/projects/mintrello.webp',
             imageAlt: 'Mintrello homepage',
             tags: ['React', 'Redux'],
@@ -86,18 +85,27 @@ export const siteContent = {
             githubHref: 'https://github.com/CGodl/mintrello',
         },
         {
+            title: 'GalaxyEye',
+            description: 'Application to track data on upcoming rocket launches around the world. One of my first projects and built with pure HTML, CSS, and JavaScript.',
+            image: '/projects/galaxyeye.webp',
+            imageAlt: 'GalaxyEye homepage',
+            tags: ['HTML5', 'CSS', 'JavaScript'],
+            siteHref: 'https://cgodl.github.io/galaxyeye/',
+            githubHref: 'https://github.com/CGodl/galaxyeye',
+        },
+        {
             title: 'Cleverbreak',
             description:
-                'A clone of Splitwise. Cleverbreak allows users to draft and track IOUs between themselves and other users.',
+                'A stull-stack clone of Splitwise built with React, Redux, and Ruby on Rails. The project allowed users to create an account, generate IOUs, track their spending, and split payments with other users.',
             image: '/projects/cleverbreak.webp',
             imageAlt: 'Cleverbreak homepage',
-            tags: ['React', 'Redux', 'Ruby', 'Ruby on Rails'],
+            tags: ['React', 'Redux', 'JavaScript', 'Ruby', 'Ruby on Rails'],
             githubHref: 'https://github.com/CGodl/CleverBreak',
         },
         {
             title: 'LessTravelled',
             description:
-                'See the hidden gems of your next road-trip. Take part in a user-curated site tracking roadside attractions.',
+                'See the hidden gems of your next road-trip. Take part in a user-curated site tracking roadside attractions. This was a Full-stack application built by a team of three developers where I served as the lead Frontend Engineer leveraging React, Redux, and JavaScript as well as learning the basics of implementing an interactive Google Maps for the user to scan and add their own roadside attractions. I also provided a supporting role in the backend development using Ruby on Rails.',
             image: '/projects/lesstravelled.webp',
             imageAlt: 'LessTravelled homepage',
             tags: ['React', 'Redux', 'JavaScript', 'Ruby', 'Ruby on Rails'],
