@@ -60,7 +60,7 @@ export function Skills() {
     return (
         <section className={cn('px-4 md:px-6 lg:px-8 py-10 md:py-14')}>
         <div className="mx-auto max-w-6xl">
-            <SectionTitle subtitle="My expertise covers a wide range of technologies and languages. Here is an outline of some of the technologies I have used in a professional setting">Skills</SectionTitle>
+            <SectionTitle subtitle="My expertise covers a wide range of technologies and languages. Here is an outline of some I have used in a professional setting">Skills</SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                 <SpacePanel className="md:col-span-3">

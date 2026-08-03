@@ -89,22 +89,19 @@ const AboutMe = () => {
 				<BentoGrid />
 				<div>
 					<h4>
-						Full-Stack Software Engineer with extensive experience working in NextJs, React, TypeScript, Python, and SQL. My passion is using
-						my experiences and know-how to develop solutions to challenges in
+						Full-Stack Software Engineer with extensive experience working in Next.js, React, TypeScript, Python, and SQL. My passion is using
+						my experience and know-how to develop solutions to challenges in
 						the tech sphere.
 					</h4>
 					<br />
 					<br />
 					<p>
-						Coming from my previous career as a Swaps Compliance Examiner my
+						Coming from my previous career as a Swaps Compliance Examiner, my
 						non-technical experience includes leadership, management,
 						interviewing subject matter experts, and working in a team setting
-						to complete projects. Some of my previous work includes projects
-						that encompass my interests in budget management, travel, and
-						organizing projects (Click here for a list of my most recent
-						projects or click here to see my resume). I am currently interested
-						in learning more about blockchain development and working through
-						courses to realize this goal.
+						to complete projects. Some of my earlier work reflects my interests
+						in budget management, travel, and project organization (Click here for a list of my most recent
+						projects or click here to see my resume). 
 					</p>
 				</div>
 			</div>

@@ -39,7 +39,7 @@ export const userExperience = {
                 { name: 'Python', icon: '/icons/languages/Python.svg', textColor: 'text-green-500' },
                 { name: 'Java', icon: '/icons/languages/Java.svg', textColor: 'text-red-500' },
                 { name: 'GraphQL', icon: '/icons/languages/GraphQL.svg', textColor: 'text-pink-500' },
-                { name: 'PostgresSQL', icon: '/icons/languages/PostgresSQL.svg', textColor: 'text-sky-400' },
+                { name: 'PostgreSQL', icon: '/icons/languages/PostgresSQL.svg', textColor: 'text-sky-400' },
             ],
         } satisfies TechSection,
 

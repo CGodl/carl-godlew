@@ -33,7 +33,7 @@ const countries: Country[] = [
         hero: { srcPart: 'KyotoGoldenPav', aspectClass: 'aspect-4/3' },
         sideTiles: [
             { srcPart: 'OsakaRunningMan', aspectClass: 'aspect-3/4', chip: 'Osaka · Dotonbori' },
-            { srcPart: 'KyotoToriGates', aspectClass: 'aspect-3/4', chip: 'Kyoto · Tori Gates' },
+            { srcPart: 'KyotoToriGates', aspectClass: 'aspect-3/4', chip: 'Kyoto · Torii Gates' },
         ],
         bottomTiles: [
             { srcPart: 'TokyoMuseum', aspectClass: 'aspect-square', chip: 'Tokyo · teamLab Borderless' },
@@ -45,7 +45,7 @@ const countries: Country[] = [
     {
         name: 'India',
         subtitle: 'Travels through New Delhi, Mumbai, and more',
-        note: "I've been to India many times and these are some photos from my most recent trip.",
+        note: "I've been to India many times, and these are some photos from my most recent trip.",
         hero: { srcPart: 'AgraTajMahal', aspectClass: 'aspect-4/3' },
         sideTiles: [
             { srcPart: 'MumbaiParsiBakery', aspectClass: 'aspect-3/4', chip: 'Mumbai · Parsi bakery' },
@@ -61,7 +61,7 @@ const countries: Country[] = [
     {
         name: 'Singapore',
         subtitle: 'The one and only',
-        note: 'Some of my experiences in Singapore.',
+        note: 'Some of my favorite photos from Singapore.',
         hero: { srcPart: 'SultanMasjid', aspectClass: 'aspect-4/3' },
         sideTiles: [
             { srcPart: 'SingaporeApartmentCoffee', aspectClass: 'aspect-3/4', chip: 'Apartment Coffee' },
