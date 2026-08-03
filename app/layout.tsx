@@ -11,7 +11,7 @@ const orbitron = Orbitron({ subsets: ['latin'], weight: ['400', '500', '700'], v
 const shareTechMono = Share_Tech_Mono({ subsets: ['latin'], weight: '400', variable: '--font-share-tech-mono' });
 
 const siteUrl = 'https://carlgodlewski.com';
-const siteDescription = 'New York City–based web developer with over five years of professional experience building and delivering modern web applications. I specialize in frontend development with React, Next.js, and Tailwind CSS, with additional experience in Python, Java, Spring Boot, FastAPI, and AWS. I have worked in start-up, mid-size, and Fortune-100 companies as a Full-Stack Developer and Lead Frontend Developer.'
+const siteDescription = 'New York City–based web developer with over five years of professional experience building and delivering modern web applications. I specialize in frontend development with React, Next.js, and Tailwind CSS, with additional experience in Python, Java, Spring Boot, FastAPI, and AWS. I have worked in startup, mid-size, and Fortune 100 companies as a Full-Stack Developer and Lead Frontend Developer.';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {

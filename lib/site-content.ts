@@ -34,8 +34,8 @@ export const siteContent = {
 
     bio: {
         headline:
-            "My passion is using my experiences and know-how to develop solutions to challenges in the tech sphere.",
-        extended: `Coming from my previous career as a Swaps Compliance Examiner my non-technical experience includes leadership, management, interviewing subject matter experts, and working in a team setting to complete projects. Some of my previous work includes projects that encompass my interests in budget management, travel, and organizing projects. I am currently interested in learning more about blockchain development and working through courses to realize this goal.`,
+            'My passion is using my experience and know-how to develop solutions to challenges in the tech sphere.',
+        extended: `Coming from my previous career as a Swaps Compliance Examiner, my non-technical experience includes leadership, management, interviewing subject matter experts, and working in a team setting to complete projects.`,
         profilePhoto: '/self/profilePhoto.webp',
         profilePhotoTwo: '/self/selfInSpain.webp',
         location: 'New York City, USA',
@@ -45,7 +45,8 @@ export const siteContent = {
     projects: [
         {
             title: 'Portfolio Website (This Website)',
-            description: " Yes, the website you’re currently viewing! I experimented with redesigning my original portfolio before ultimately replacing it with this space-themed version. The design was inspired by GalaxyEye, one of my earliest projects, as well as my broader interest in the theme of exploration. I began by using Figma to map out the website’s structure and create a style guide for its typography and components. I also used the project as an opportunity to experiment with LLM tools, including Fable 5, and better understand how they could support the design and implementation process. By combining these tools with my own development experience, I was able to create a portfolio that matched my original vision while significantly reducing implementation time. ",
+            description:
+                "Yes, the website you're currently viewing! I experimented with redesigning my original portfolio before ultimately replacing it with this space-themed version. The design was inspired by GalaxyEye, one of my earliest projects, as well as my broader interest in the theme of exploration. I began by using Figma to map out the website's structure and create a style guide for its typography and components. I also used the project as an opportunity to experiment with LLM tools, including Fable 5, and better understand how they could support the design and implementation process. By combining these tools with my own development experience, I was able to create a portfolio that matched my original vision while significantly reducing implementation time.",
             image: '/projects/spaceHeader.webp',
             imageAlt: 'Portfolio homepage',
             tags: ['Next.js', 'Tailwind', 'TypeScript'],
@@ -55,20 +56,20 @@ export const siteContent = {
         {
             title: 'Garbo',
             description:
-                'Worked as the sole Frontend Engineer 2021-2022. Garbo was a background checking web application used by over one million unique users and built on React with SaSS styling.',
+                'Worked as the sole Frontend Engineer from 2021 to 2022. Garbo was a background-check web application used by over one million unique users and built on React with Sass styling.',
             image: '/projects/garbo.webp',
             imageAlt: 'Garbo homepage',
             tags: ['React', 'Sass', 'JavaScript'],
             siteHref: 'https://garbo.io',
             addlLink: 'https://www.tinderpressroom.com/2022-03-09-Garbo-Launches-Background-Check-Platform-To-Public-and-On-Tinder',
-            addlLinkText: "Match Group Press Release",
+            addlLinkText: 'Match Group Press Release',
             addlLink2: 'https://www.theverge.com/2021/3/15/22327854/match-group-garbo-tinder-background-check-update',
-            addlLink2Text: 'TheVerge Article',
+            addlLink2Text: 'The Verge Article',
         },
         {
             title: 'GealAi',
             description:
-                'Experience the future with an AI-driven web app that seamlessly generates conversations, coding assistance, and music. Transform your ideas into reality with the ultimate multitasking marvel, redefining the way you engage with technology. This project was developed as part of a self-study initiative into learning more about AI and its capabilities. It leverages OpenAI\'s and Replicate\'s AI models to generate content. The application itself was built without LLM tools on Next.js, TypeScript, and Tailwind CSS.',
+                "Experience the future with an AI-driven web app that seamlessly generates conversations, coding assistance, and music. Transform your ideas into reality with the ultimate multitasking marvel, redefining the way you engage with technology. This project was developed as a self-study initiative to learn more about AI and its capabilities. It leverages OpenAI's and Replicate's AI models to generate content. The application itself was built with Next.js, TypeScript, and Tailwind CSS, without LLM tools.",
             image: '/projects/gealai.webp',
             imageAlt: 'GealAi homepage',
             tags: ['Next.js', 'TypeScript', 'Supabase'],
@@ -77,7 +78,7 @@ export const siteContent = {
         {
             title: 'Mintrello',
             description:
-                'Designed as part of the Mintbean Hackathon challenge on 8/28/20. The goal was to create a working kanban board over the weekend. I served as the Frontend Engineer on this project. Final project was a noted runner-up in the competition.',
+                'Designed as part of the Mintbean Hackathon challenge on 8/28/20. The goal was to create a working kanban board over the weekend. I served as the Frontend Engineer on this project. The final project was a noted runner-up in the competition.',
             image: '/projects/mintrello.webp',
             imageAlt: 'Mintrello homepage',
             tags: ['React', 'Redux'],
@@ -86,7 +87,8 @@ export const siteContent = {
         },
         {
             title: 'GalaxyEye',
-            description: 'Application to track data on upcoming rocket launches around the world. One of my first projects and built with pure HTML, CSS, and JavaScript.',
+            description:
+                'An application to track data on upcoming rocket launches around the world. One of my first projects, built with pure HTML, CSS, and JavaScript.',
             image: '/projects/galaxyeye.webp',
             imageAlt: 'GalaxyEye homepage',
             tags: ['HTML5', 'CSS', 'JavaScript'],
@@ -96,7 +98,7 @@ export const siteContent = {
         {
             title: 'Cleverbreak',
             description:
-                'A stull-stack clone of Splitwise built with React, Redux, and Ruby on Rails. The project allowed users to create an account, generate IOUs, track their spending, and split payments with other users.',
+                'A full-stack clone of Splitwise built with React, Redux, and Ruby on Rails. The project allowed users to create an account, generate IOUs, track their spending, and split payments with other users.',
             image: '/projects/cleverbreak.webp',
             imageAlt: 'Cleverbreak homepage',
             tags: ['React', 'Redux', 'JavaScript', 'Ruby', 'Ruby on Rails'],
@@ -105,7 +107,7 @@ export const siteContent = {
         {
             title: 'LessTravelled',
             description:
-                'See the hidden gems of your next road-trip. Take part in a user-curated site tracking roadside attractions. This was a Full-stack application built by a team of three developers where I served as the lead Frontend Engineer leveraging React, Redux, and JavaScript as well as learning the basics of implementing an interactive Google Maps for the user to scan and add their own roadside attractions. I also provided a supporting role in the backend development using Ruby on Rails.',
+                'See the hidden gems of your next road trip. Take part in a user-curated site tracking roadside attractions. This was a full-stack application built by a team of three developers. I served as the lead Frontend Engineer, using React, Redux, and JavaScript, and implemented an interactive Google Map so users could scan and add roadside attractions. I also supported backend development with Ruby on Rails.',
             image: '/projects/lesstravelled.webp',
             imageAlt: 'LessTravelled homepage',
             tags: ['React', 'Redux', 'JavaScript', 'Ruby', 'Ruby on Rails'],
@@ -170,7 +172,7 @@ export const siteContent = {
                 highlights: [
                     'Reduced back-end load and SQL query volume by 80% by redesigning Angular data services with centralized state management, improving application performance and scalability.',
                     'Improved data processing by reducing reliance on multi-page forms through the development of an AI-powered chatbot using Streamlit and FastAPI.',
-                    'Designed and implemented a scalable data ingestion pipeline using Java, Spring Boot, Spring Batch, and AWS (S3, DynamoDB), reducing upload processing time up to 60%.',
+                    'Designed and implemented a scalable data ingestion pipeline using Java, Spring Boot, Spring Batch, and AWS (S3, DynamoDB), reducing upload processing time by up to 60%.',
                     'Modernized front-end architecture by migrating Angular features to a new application, building reusable components and optimizing rendering performance.',
                 ],
             },
@@ -181,7 +183,7 @@ export const siteContent = {
                 highlights: [
                     'Served as sole Full-Stack Developer for an AI-based web application using Next.js, TypeScript, Tailwind, Clerk, and Supabase with a PostgreSQL database.',
                     'Integrated back-end microservices utilizing Stripe webhooks with Supabase edge functions for payment processing.',
-                    "Implemented end-to-end Stripe payment processing and Crisp customer service chat to the application ahead of the client's 3-day deadline.",
+                    "Implemented end-to-end Stripe payment processing and Crisp customer service chat in the application ahead of the client's 3-day deadline.",
                     'Built an internal library to standardize RESTful API routes via React hooks for the application.',
                 ],
             },

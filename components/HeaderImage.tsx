@@ -259,7 +259,7 @@ export const HeaderImage = () => {
                         </span>
                         <span className="block">Frontier!</span>
                     </h1>
-                    <p className="font-orbitron text-sm md:text-md tracking-[0.25em] uppercase text-white mt-6">
+                    <p className="font-orbitron text-xs md:text-md tracking-[0.25em] uppercase text-white mt-6">
                         Carl Godlewski · Web Developer
                     </p>
                 </div>
