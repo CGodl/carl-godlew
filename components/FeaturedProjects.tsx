@@ -9,10 +9,8 @@ import { siteContent } from '@/lib/site-content';
 import { userExperience } from '@/lib/user-experience';
 import { cn } from '@/lib/utils';
 
-// Project tag names that differ from their TechItem name in user-experience.ts
 const TAG_ALIASES: Record<string, string> = {
-    Tailwind: 'Tailwind CSS',
-    PostgreSQL: 'PostgresSQL',
+    Tailwind: 'Tailwind CSS'
 };
 
 const techIconByName = new Map(
